@@ -65,19 +65,24 @@ h4 {
 
 .active {
   background-color: green;
-  /* or any color you prefer */
   color: white;
-}
-
-.button-1,
-.button-2 {
   border: none;
 }
+
 
 h1 {
   color: red;
 }
 
+.btn-2 {
+  border: none;
+  border-radius: 15px;
+}
+
+.btn-1 {
+  border: none;
+  border-radius: 15px;
+}
 
 
 
@@ -85,7 +90,6 @@ h1 {
 @media screen and (max-width: 600px) {
   #sidebar {
     width: 100%;
-    /* Make the sidebar full width */
   }
 
   #dashboard {

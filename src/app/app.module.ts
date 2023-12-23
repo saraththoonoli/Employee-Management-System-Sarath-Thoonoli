@@ -28,6 +28,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { LeaveApplicationComponent } from './leave-application/leave-application.component';
 import { LeaveBarChartComponent } from './leave-bar-chart/leave-bar-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { InfoComponent } from './info/info.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 
@@ -52,6 +54,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     SpinnerComponent,
     LeaveApplicationComponent,
     LeaveBarChartComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatToolbarModule,
     MatIconModule,
     NgxChartsModule,
+    MatChipsModule
     
   ],
   providers: [],

@@ -79,54 +79,6 @@
       "password": "swathi2525",
       "id": 8,
       "online": false
-    },
-    {
-      "name": "karthi",
-      "email": "karthi@gmail.com",
-      "phone": 9854523698,
-      "age": 52,
-      "dob": "1880-12-12",
-      "image": "hhh",
-      "bloodGroup": "AB+ve",
-      "gender": "female",
-      "leaveDetails": "",
-      "designation": "Sales",
-      "username": "karthika",
-      "password": "karthika",
-      "id": 13,
-      "online": true
-    },
-    {
-      "name": "suresh",
-      "email": "sura@gmail.com",
-      "phone": 9532156976,
-      "age": 36,
-      "dob": "1980-12-12",
-      "image": "fff",
-      "bloodGroup": "",
-      "gender": "male",
-      "leaveDetails": "",
-      "designation": "Designer",
-      "username": "suresh",
-      "password": "suresh",
-      "id": 14,
-      "online": true
-    },
-    {
-      "name": "gurunath",
-      "email": "guru@gmail.com",
-      "phone": 8526941567,
-      "age": 29,
-      "dob": "1900-12-12",
-      "image": "jg",
-      "bloodGroup": "AB+ve",
-      "gender": "male",
-      "leaveDetails": "",
-      "designation": "Developer",
-      "username": "guru",
-      "password": "guru",
-      "id": 16,
-      "online": false
     }
   ],
   "leaveRequests": [
@@ -188,15 +140,6 @@
       "id": 35
     },
     {
-      "employeeId": "16",
-      "startDate": "2023-12-12",
-      "endDate": "2023-12-14",
-      "reason": "personal reasons",
-      "leaveType": "personal",
-      "status": "approved",
-      "id": 36
-    },
-    {
       "employeeId": "3",
       "startDate": "2023-12-22",
       "endDate": "2023-12-24",
@@ -213,6 +156,15 @@
       "leaveType": "sick",
       "status": "pending",
       "id": 38
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-24",
+      "endDate": "2023-12-25",
+      "reason": "Bangalore trip",
+      "leaveType": "vacation",
+      "status": "pending",
+      "id": 39
     }
   ],
   "hrResponses": [],

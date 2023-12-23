@@ -17,10 +17,12 @@ export class EmployeeDetailsComponent implements OnInit {
     private router: Router,
     private employeeService: EmployeeService,
     private leaveService: LeaveService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadEmployees();
+    this.loadEmployees();
+
   }
 
   loadEmployees(): void {
@@ -39,26 +41,38 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   deleteEmployee(employeeId: number): void {
-    if (confirm('Are you sure you want to delete this employee?')) {
-      this.employeeService.deleteEmployee(employeeId).subscribe(
-        () => {
-          Swal.fire({
-            title: 'Success!',
-            text: 'Employee deleted successfully.',
-            icon: 'success',
-          });
-          this.employeeService.notifyRefreshList(); // Notify to refresh the employee list
-        },
-        (error) => {
-          Swal.fire({
-            title: 'Error!',
-            text: 'An error occurred while deleting the employee.',
-            icon: 'error',
-          });
-          console.error('Error deleting employee:', error);
-        }
-      );
-    }
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You won\'t be able to revert this!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.employeeService.deleteEmployee(employeeId).subscribe(
+          () => {
+            Swal.fire({
+              title: 'Success!',
+              text: 'Employee deleted successfully.',
+              icon: 'success',
+            });
+            this.loadEmployees();
+            this.employeeService.notifyRefreshList(); // Notify to refresh the employee list
+          },
+          (error) => {
+            Swal.fire({
+              title: 'Error!',
+              text: 'An error occurred while deleting the employee.',
+              icon: 'error',
+            });
+            console.error('Error deleting employee:', error);
+          }
+        );
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', 'Employee deletion cancelled.', 'error');
+      }
+    });
   }
 
   // Back function
