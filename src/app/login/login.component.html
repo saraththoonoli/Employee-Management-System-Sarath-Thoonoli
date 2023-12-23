@@ -1,0 +1,68 @@
+<div class="row bnx-login-page col-12">
+  <div class="col bnx-main-div col-6">
+    <marquee><h6>This is only for beinex Hr and Employees</h6></marquee>
+    <!-- title section -->
+    <div class="col-md-6 bnx-login-page-title">
+      <div class="container text-center">
+        <h1>Welcome to Beinex</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <img
+          width="100px"
+          src="https://cdn.pixabay.com/animation/2022/12/01/17/03/17-03-11-60_512.gif"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col bnx-main-div-two col-6">
+    <!-- login section -->
+    <div class="col-md-6 bnx-login-page-login">
+      <div class="container">
+        <h2>
+          Login
+          <i
+            class="fa-solid fa-fade fa-right-to-bracket"
+            style="color: #115cdf"
+          ></i>
+        </h2>
+        <form>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              [(ngModel)]="username"
+              name="username"
+              placeholder="Enter User Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              [(ngModel)]="password"
+              name="password"
+              placeholder="Enter User Password"
+              required
+            />
+          </div>
+          <br />
+          <button
+            type="button"
+            class="btn btn-outline-primary btn-block"
+            (click)="login()"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<a class="btn ms-3 me-3 mt-3" (click)="goBack()"
+  ><i class="fa-solid fa-2xl fa-circle-left" style="color: #000000"></i
+></a>
+<div class="container mt-4">
+  <h2 class="mb-4">
+    Apply for Leave
+    <i class="fa-solid fa-file-export" style="color: #0d5de7"></i>
+  </h2>
+  <form [formGroup]="leaveForm" (ngSubmit)="applyLeave()">
+    <div class="mb-3">
+      <label for="leaveType" class="form-label">Type of Leave:</label>
+      <select id="leaveType" formControlName="leaveType" class="form-select">
+        <option value="sick">Sick Leave</option>
+        <option value="vacation">Vacation</option>
+        <option value="personal">Personal Leave</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="startDate" class="form-label">Start Date:</label>
+      <input
+        type="date"
+        id="startDate"
+        formControlName="startDate"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="endDate" class="form-label">End Date:</label>
+      <input
+        type="date"
+        id="endDate"
+        formControlName="endDate"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="reason" class="form-label">Reason:</label>
+      <textarea
+        id="reason"
+        formControlName="reason"
+        class="form-control"
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      [disabled]="leaveForm.invalid"
+      class="btn btn-primary"
+    >
+      Apply
+    </button>
+  </form>
+</div>
+
+<!-- leave req details -->
+<div class="container mt-4">
+  <h2 class="mb-4">Your Leave Requests status</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of leaveRequests">
+        <td>{{ request.startDate }}</td>
+        <td>{{ request.endDate }}</td>
+        <td style="color: red">{{ request.status }}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

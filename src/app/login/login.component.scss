@@ -1,0 +1,60 @@
+.bnx-main-div-two {
+    background-color: rgb(251, 251, 243);
+    height: 85vh;
+    width: 50%;
+}
+
+.bnx-login-page-login {
+    padding-top: 180px;
+    justify-content: center;
+    padding-left: 50px;
+
+    h2 {
+        font-size: 38px;
+        font-weight: 600;
+        color: blueviolet;
+    }
+
+    label {
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+
+    input {
+        height: 50px;
+    }
+}
+
+.bnx-login-page-title {
+    padding-top: 160px;
+    text-align: center;
+    margin: auto;
+
+    h1 {
+        font-weight: 600;
+        color: blueviolet;
+        font-size: 38px;
+
+    }
+
+    p {
+        font-weight: 350;
+
+    }
+
+}
+
+button {
+    padding: 12px 50px 12px 50px;
+    color: blue;
+    font-weight: 600;
+}
+
+marquee {
+    h6 {
+        color: red;
+        padding-top: 15px;
+        font-size: 15px;
+    }
+
+}

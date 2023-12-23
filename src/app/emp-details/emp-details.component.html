@@ -1,0 +1,68 @@
+<!-- Back button -->
+<a class="btn ms-2 me-2 mt-3" (click)="goBack()">
+  <i class="fa-solid fa-2xl fa-circle-left" style="color: #000000"></i>
+</a>
+<!-- details start -->
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-body">
+      <!-- heading -->
+      <h2 class="text-center mb-4">
+        Employee Details
+        <i class="fa-regular fa-id-badge" style="color: #165cd4"></i>
+      </h2>
+
+      <div id="details" *ngIf="loggedInEmployee" class="d-flex">
+        <!-- Card for employee image -->
+        <div class="card" style="width: 200px; margin-right: 20px">
+          <img
+            [src]="loggedInEmployee.image"
+            alt="Employee Image"
+            class="card-img-top img-thumbnail"
+          />
+        </div>
+
+        <!-- Card for employee details -->
+        <div class="card flex-grow-1">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Age</th>
+                  <th>DOB</th>
+                  <th>Blood Group</th>
+                  <th>Gender</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row for employee details -->
+                <tr>
+                  <td>{{ loggedInEmployee.name }}</td>
+                  <td>{{ loggedInEmployee.email }}</td>
+                  <td>{{ loggedInEmployee.phone }}</td>
+                  <td>{{ loggedInEmployee.age }}</td>
+                  <td>{{ loggedInEmployee.dob }}</td>
+                  <td>{{ loggedInEmployee.bloodGroup }}</td>
+                  <td>{{ loggedInEmployee.gender }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Button for editing details -->
+            <div class="text-end">
+              <a
+                class="btn btn-warning"
+                [routerLink]="['/edit-employee', loggedInEmployee.id]"
+              >
+                Edit Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

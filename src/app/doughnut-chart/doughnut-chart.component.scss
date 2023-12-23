@@ -1,0 +1,23 @@
+.status {
+    background-color: rgb(231, 231, 243);
+    padding-top: 50px;
+
+    h1{
+        font-size: 28px;
+        font-weight: 700;
+    
+      }
+    svg{
+       width: 100%;
+       height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .status {
+        width: 100%;
+        /* Make the sidebar full width */
+    }
+
+
+}

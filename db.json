@@ -1,0 +1,229 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "username": "employee1",
+      "password": "employee1password",
+      "name": "EmployeeOne",
+      "email": "employee1@example.com",
+      "phone": "1234567890",
+      "age": 30,
+      "dob": "1992-01-01",
+      "image": "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg",
+      "bloodGroup": "O+",
+      "gender": "male",
+      "leaveDetails": "5 leave taken",
+      "online": true,
+      "designation": "Backend "
+    },
+    {
+      "name": "sharath.t",
+      "email": "mama@gmail",
+      "phone": "9874586214",
+      "age": 23,
+      "dob": "2023-12-21",
+      "image": "https://media.licdn.com/dms/image/D5603AQERl2UEHojnSg/profile-displayphoto-shrink_200_200/0/1696170916176?e=2147483647&v=beta&t=QaLTJxALDgI3n7Eek-Dz4Natkj9z3mpad3jcIyTJH-s",
+      "bloodGroup": "B+ve",
+      "gender": "male",
+      "leaveDetails": "2 leave",
+      "username": "saraththoonoli",
+      "password": "sarath",
+      "id": 3,
+      "status": "inactive",
+      "online": false,
+      "designation": "software engineer"
+    },
+    {
+      "name": "shamal.m",
+      "email": "shamal@gmail.com",
+      "phone": "5215687598",
+      "age": 22,
+      "dob": "2000-10-12",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAAqmurFvPdiEBK824gg5B_CD1nIgXnClXCA&usqp=CAU",
+      "bloodGroup": "A+ve",
+      "gender": "male",
+      "leaveDetails": "",
+      "username": "shamal",
+      "password": "shamal",
+      "id": 4,
+      "online": true
+    },
+    {
+      "name": "akash.p",
+      "email": "akash@gmail.com",
+      "phone": 9524756329,
+      "age": 22,
+      "dob": "2003-12-12",
+      "image": "https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg",
+      "bloodGroup": "A-ve",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "Backend ",
+      "username": "akash",
+      "password": "akash",
+      "id": 5,
+      "online": false
+    },
+    {
+      "name": "swathi",
+      "email": "swathi@gmail.com",
+      "phone": 8526497563,
+      "age": 29,
+      "dob": "1988-12-21",
+      "image": "kj",
+      "bloodGroup": "A+ve",
+      "gender": "female",
+      "leaveDetails": "",
+      "designation": "Data engineer",
+      "username": "swathi",
+      "password": "swathi2525",
+      "id": 8,
+      "online": false
+    },
+    {
+      "name": "karthi",
+      "email": "karthi@gmail.com",
+      "phone": 9854523698,
+      "age": 52,
+      "dob": "1880-12-12",
+      "image": "hhh",
+      "bloodGroup": "AB+ve",
+      "gender": "female",
+      "leaveDetails": "",
+      "designation": "Sales",
+      "username": "karthika",
+      "password": "karthika",
+      "id": 13,
+      "online": true
+    },
+    {
+      "name": "suresh",
+      "email": "sura@gmail.com",
+      "phone": 9532156976,
+      "age": 36,
+      "dob": "1980-12-12",
+      "image": "fff",
+      "bloodGroup": "",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "Designer",
+      "username": "suresh",
+      "password": "suresh",
+      "id": 14,
+      "online": true
+    },
+    {
+      "name": "gurunath",
+      "email": "guru@gmail.com",
+      "phone": 8526941567,
+      "age": 29,
+      "dob": "1900-12-12",
+      "image": "jg",
+      "bloodGroup": "AB+ve",
+      "gender": "male",
+      "leaveDetails": "",
+      "designation": "Developer",
+      "username": "guru",
+      "password": "guru",
+      "id": 16,
+      "online": false
+    }
+  ],
+  "leaveRequests": [
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-22",
+      "endDate": "2023-12-21",
+      "reason": "mnbjhk",
+      "leaveType": "vacation",
+      "status": "approved",
+      "id": 28
+    },
+    {
+      "status": "approved",
+      "id": 29
+    },
+    {
+      "status": "rejected",
+      "id": 30
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-12",
+      "endDate": "2023-12-15",
+      "reason": "tfyffgf",
+      "leaveType": "sick",
+      "status": "approved",
+      "dates": [],
+      "reasons": "",
+      "id": 31
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-21",
+      "endDate": "2023-12-25",
+      "reason": "wokdmiwd",
+      "leaveType": "vacation",
+      "status": "rejected",
+      "dates": [],
+      "reasons": "",
+      "id": 33
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-25",
+      "endDate": "2023-12-28",
+      "reason": "khbsj",
+      "leaveType": "vacation",
+      "status": "approved",
+      "id": 34
+    },
+    {
+      "employeeId": "4",
+      "startDate": "2023-12-21",
+      "endDate": "2023-12-22",
+      "reason": "feaver",
+      "leaveType": "sick",
+      "status": "rejected",
+      "id": 35
+    },
+    {
+      "employeeId": "16",
+      "startDate": "2023-12-12",
+      "endDate": "2023-12-14",
+      "reason": "personal reasons",
+      "leaveType": "personal",
+      "status": "approved",
+      "id": 36
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-22",
+      "endDate": "2023-12-24",
+      "reason": "Travel to ootty",
+      "leaveType": "vacation",
+      "status": "pending",
+      "id": 37
+    },
+    {
+      "employeeId": "4",
+      "startDate": "2023-12-23",
+      "endDate": "2023-12-24",
+      "reason": "Feaver",
+      "leaveType": "sick",
+      "status": "pending",
+      "id": 38
+    }
+  ],
+  "hrResponses": [],
+  "leaveCounts": [
+    {
+      "employeeId": 1,
+      "leaveCount": 5
+    },
+    {
+      "employeeId": 2,
+      "leaveCount": 8
+    }
+  ]
+}

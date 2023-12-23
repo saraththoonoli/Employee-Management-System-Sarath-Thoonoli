@@ -1,0 +1,41 @@
+<mat-drawer-container class="example-container">
+  <!-- right dashboard side -->
+  <mat-drawer mode="side" opened>
+    <div id="sidebar">
+      <img
+        class="ms-4"
+        height="120px"
+        width="120px"
+        src="https://media.istockphoto.com/id/1061611506/photo/bring-confidence-to-everything-you-do.jpg?s=612x612&w=0&k=20&c=BYQrDliHSfrKcpI_BZ-xCJLOg-NgAV6-B3E2zub4cvg="
+        alt=""
+      />
+      <hr />
+      <a class="mt-4" href="employee-details">Employee Details</a>
+      <hr />
+      <a href="create-employee">Add new employee</a>
+      <hr />
+      <a href="leave-details">Leave details page</a>
+      <hr />
+      <a type="button" (click)="logout()"
+        ><i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff"></i
+        >&nbsp;Logout</a
+      >
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <!-- Right Dashboard  -->
+    <div id="dashboard">
+      <div style="justify-content: space-between; display: flex">
+        <h1>Welcome to the HR Dashboard</h1>
+        &nbsp;
+        <button mat-raised-button routerLink="/create-employee" color="primary">
+          <i class="fa-solid fa-user-plus" style="color: #ffffff"></i>
+        </button>
+      </div>
+
+      <app-hr-leave></app-hr-leave>
+    </div>
+    <app-doughnut-chart></app-doughnut-chart>
+    <app-leave-bar-chart></app-leave-bar-chart>
+  </mat-drawer-content>
+</mat-drawer-container>

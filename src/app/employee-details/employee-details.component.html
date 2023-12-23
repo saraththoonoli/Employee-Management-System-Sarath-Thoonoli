@@ -1,0 +1,72 @@
+<a class="btn ms-3 me-3 mt-1" (click)="goBack()"
+  ><i class="fa-solid fa-2xl fa-circle-left" style="color: #000000"></i
+></a>
+
+<div class="container">
+  <h2 class="text-center mb-1">
+    All Employee Details
+    <i class="fa-solid fa-database" style="color: #1760de"></i>
+  </h2>
+  <hr />
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th class="d-none d-md-table-cell">Age</th>
+          <th class="d-none d-md-table-cell">DOB</th>
+          <th class="d-none d-md-table-cell">Image</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th class="d-none d-md-table-cell">Blood Group</th>
+          <th class="d-none d-md-table-cell">Gender</th>
+          <th class="d-none d-md-table-cell">Status</th>
+          <th class="d-none d-md-table-cell">Action</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.designation }}</td>
+          <td class="d-none d-md-table-cell">{{ employee.age }}</td>
+          <td class="d-none d-md-table-cell">{{ employee.dob }}</td>
+          <td class="d-none d-md-table-cell">
+            <img
+              [src]="employee.image"
+              alt="Employee Image"
+              width="70"
+              height="50"
+            />
+          </td>
+          <td>{{ employee.phone }}</td>
+          <td>{{ employee.email }}</td>
+          <td class="d-none d-md-table-cell">{{ employee.bloodGroup }}</td>
+          <td class="d-none d-md-table-cell">{{ employee.gender }}</td>
+          <td class="d-none d-md-table-cell">{{ employee.online }}</td>
+
+          <td>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button
+                [routerLink]="'/edit/' + employee.id"
+                class="btn btn-warning me-md-2 mb-2 mb-md-0"
+              >
+                <i class="fa-solid fa-user-pen" style="color: #ffffff"></i>
+              </button>
+              <button
+                class="btn btn-danger"
+                (click)="deleteEmployee(employee.id)"
+              >
+                <i class="fa-solid fa-trash" style="color: #ffffff"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
