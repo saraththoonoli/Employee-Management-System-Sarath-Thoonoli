@@ -10,7 +10,7 @@ import { PieArcDatum } from 'd3-shape';
 })
 export class DoughnutChartComponent implements OnInit {
   private employeeData: any[] = [];
-  // inject
+  //Dependancy inject
   constructor(
     private elementRef: ElementRef,
     private zone: NgZone,
@@ -20,7 +20,7 @@ export class DoughnutChartComponent implements OnInit {
   ngOnInit(): void {
     this.fetchEmployeeData();
   }
-  // fetch employee data
+  // fetch  employee data from employee services.
   private fetchEmployeeData(): void {
     this.employeeService.getEmployees().subscribe(
       (employees) => {
@@ -84,6 +84,9 @@ export class DoughnutChartComponent implements OnInit {
           return `translate(${centroid[0]}, ${centroid[1]})`;
         })
         .attr('text-anchor', 'middle')
+        .style('font-size', '12px') // Set font size
+        .style('fill', '#fff') // Set text color 
+        .style('font-weight', '700') // Set text color           
         .text(
           (d: any) => `${d.data.name} - ${d.data.online ? 'Online' : 'Offline'}`
         );
