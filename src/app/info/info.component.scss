@@ -1,10 +1,8 @@
-/* Apply a general style to the entire document */
 body {
     font-family: 'Arial', sans-serif;
     margin: 20px;
   }
   
-  /* Style for the heading level 1 (h1) */
   h1 {
     color: #333;
     text-align: center;
@@ -13,13 +11,11 @@ body {
     text-transform: uppercase;
   }
   
-  /* Style for the paragraphs (p) */
   p {
     line-height: 1.6;
     margin-bottom: 15px;
   }
 
-  /* Style for the numbered sections */
   h1+p {
     margin-top: 40px;
     background-color: #f7f7f7;
