@@ -19,13 +19,13 @@ const routes: Routes = [
   { path: 'hr-dashboard', component: HrDashboardComponent,canActivate: [AuthGuard] },
   { path: 'employee-dashboard', component: EmployeeDashboardComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'employee-details', component: EmployeeDetailsComponent, },
-  { path: 'create-employee', component: CreateEmployeeComponent, },
-  { path: 'edit/:id', component: EditEmployeeComponent,  },
-  { path: 'emp-details', component: EmpDetailsComponent,  },
-  { path: 'leave-details', component: LeaveApplicationComponent,  },
-  { path: 'leave-req', component: LeaveRequestComponent,  },
-  { path: 'edit-employee/:id', component: EmpEditComponent,  },
+  { path: 'employee-details', component: EmployeeDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'create-employee', component: CreateEmployeeComponent, canActivate: [AuthGuard] },
+  { path: 'edit/:id', component: EditEmployeeComponent, canActivate: [AuthGuard]  },
+  { path: 'emp-details', component: EmpDetailsComponent, canActivate: [AuthGuard]  },
+  { path: 'leave-details', component: LeaveApplicationComponent, canActivate: [AuthGuard]  },
+  { path: 'leave-req', component: LeaveRequestComponent, canActivate: [AuthGuard]  },
+  { path: 'edit-employee/:id', component: EmpEditComponent, canActivate: [AuthGuard]  },
   {path:'**',component:WilsCardComponent}
 ];
 
