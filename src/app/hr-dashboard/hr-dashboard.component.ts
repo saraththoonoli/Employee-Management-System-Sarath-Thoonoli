@@ -8,9 +8,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   templateUrl: './hr-dashboard.component.html',
   styleUrls: ['./hr-dashboard.component.scss'],
 })
+// Injection
 export class HrDashboardComponent {
-  constructor(private router: Router, private authService: AuthService) {}
-
+  constructor(private router: Router, private authService: AuthService) { }
+  // logout 
   logout() {
     this.authService.logout();
     this.router.navigate(['/login']);

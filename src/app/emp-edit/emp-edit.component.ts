@@ -16,16 +16,19 @@ export class EmpEditComponent {
     private route: ActivatedRoute,
     private router: Router,
     private employeeService: EmployeeService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
+    // Subscribe to route parameters to get the employee ID
     this.route.params.subscribe((params) => {
       this.employeeId = +params['id'];
+      // Load employee details based on the ID
       this.loadEmployeeDetails();
     });
   }
 
   loadEmployeeDetails(): void {
+    // Fetch employee details using the employee service
     this.employeeService.getEmployeeDetails(this.employeeId).subscribe(
       (data) => {
         this.employee = data;
@@ -38,10 +41,12 @@ export class EmpEditComponent {
 
   updateEmployee(): void {
     if (this.employeeId) {
+      // If the employee ID is available, update the employee details
       this.employeeService
         .updateEmployee(this.employeeId, this.employee)
         .subscribe(
           () => {
+            // Display a success alert using SweetAlert2
             Swal.fire({
               icon: 'success',
               title: 'Success',
@@ -56,6 +61,7 @@ export class EmpEditComponent {
           },
           (error) => {
             Swal.fire({
+              // Display an error alert if the update fails
               icon: 'error',
               title: 'Error',
               text: 'Error updating employee details. Please try again.',
@@ -66,6 +72,7 @@ export class EmpEditComponent {
     }
   }
   goBack(): void {
-    this.router.navigate(['/emp-details']); // Adjust the route accordingly
+    // Navigate back to the employee details page
+    this.router.navigate(['/emp-details']);
   }
 }

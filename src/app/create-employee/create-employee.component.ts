@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./create-employee.component.scss'],
 })
 export class CreateEmployeeComponent {
-  // for saving employee details in backend
+  // for saving employee details in backend DB.json
   employee: any = {
     name: '',
     email: '',
@@ -31,7 +31,7 @@ export class CreateEmployeeComponent {
     private router: Router
   ) {}
 
-  // onSubmit
+  // onSubmit methord
   onSubmit(): void {
     this.employeeService.addEmployee(this.employee).subscribe(
       () => {

@@ -35,6 +35,6 @@ export class EmpDetailsComponent implements OnInit {
 
   // Navigate back to the previous page
   goBack(): void {
-    this.router.navigate(['/employee-dashboard']); // Adjust the route accordingly
+    this.router.navigate(['/employee-dashboard']);
   }
 }

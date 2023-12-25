@@ -11,9 +11,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  // login Properties
   username: string = '';
   password: string = '';
-  // Add loading property
+  // spinner property
   loading: boolean = false;
 
   constructor(
@@ -21,12 +22,15 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private spinnerService: SpinnerService
   ) {}
-
+// Life cycle hook
   ngOnInit(): void {}
 
+// Login Method
   login(): void {
+
     // Show spinner
     this.spinnerService.show();
+    // Call the login method of the AuthService
     this.authService.login(this.username, this.password).subscribe(
       (success) => {
         if (success) {
@@ -58,7 +62,7 @@ export class LoginComponent implements OnInit {
       (error) => {
         console.error('Error during login:', error);
 
-        // Display error alert using SweetAlert2
+        // Display error alert 
         Swal.fire({
           icon: 'error',
           title: 'Error',
@@ -66,7 +70,7 @@ export class LoginComponent implements OnInit {
         });
       },
       () => {
-        // Hide spinner on completion (success or error)
+        // Hide spinner on completion 
         this.spinnerService.hide(); 
       }
     );

@@ -14,7 +14,7 @@ export class AuthService {
   private employeeCredentials: any[] = [];
   // get loggedin employee id
   private loggedInEmployeeId: number | null = null;
-// DI of http
+  // DI of http
   constructor(private http: HttpClient) {
     // Fetch employee credentials from the server (db.json)
     this.http
@@ -27,7 +27,7 @@ export class AuthService {
         }));
       });
   }
-// login logic
+  // login logic
   login(username: string, password: string): Observable<boolean> {
     return this.http.get<any[]>(this.apiUrl).pipe(
       map((employees) => {
@@ -56,41 +56,41 @@ export class AuthService {
       })
     );
   }
-// logout
+  // logout
   logout(): void {
     localStorage.removeItem('role');
     localStorage.removeItem('employeeId');
   }
-// get role hr or employee
+  // get role hr or employee
   getRole(): string | null {
     return localStorage.getItem('role');
   }
-
+  // Check if the user is logged in
   isLoggedIn(): boolean {
     return this.getRole() !== null;
   }
-
+  // Set and get the ID of the logged-in employee
   setLoggedInEmployeeId(employeeId: string): void {
     localStorage.setItem('employeeId', employeeId);
   }
-
+  // get loged employee id
   getLoggedInEmployeeId(): string | null {
     return localStorage.getItem('employeeId');
   }
-
+  // Clear the logged-in employee ID
   clearLoggedInEmployeeId(): void {
     localStorage.removeItem('employeeId');
   }
-
+  // Set, get, and clear logged-in employee details
   setLoggedInEmployeeDetails(details: any): void {
     localStorage.setItem('employeeDetails', JSON.stringify(details));
   }
-// fetch logged in employee details
+  // fetch logged in employee details
   getLoggedInEmployeeDetails(): any | null {
     const details = localStorage.getItem('employeeDetails');
     return details ? JSON.parse(details) : null;
   }
-// clear loggedin employee details
+  // clear loggedin employee details
   clearLoggedInEmployeeDetails(): void {
     localStorage.removeItem('employeeDetails');
   }

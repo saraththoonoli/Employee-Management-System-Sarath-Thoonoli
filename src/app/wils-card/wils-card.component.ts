@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./wils-card.component.scss']
 })
 export class WilsCardComponent {
-constructor(private router:Router){}
-    // Back function
-    goBack(): void {
-      this.router.navigate(['/login']);
-    }
+  constructor(private router: Router) { }
+  // Back function
+  goBack(): void {
+    this.router.navigate(['/login']);
+  }
 }

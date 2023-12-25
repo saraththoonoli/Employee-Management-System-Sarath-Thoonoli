@@ -16,12 +16,12 @@ export class LeaveApplicationComponent {
     private router: Router,
     private employeeService: EmployeeService,
     private leaveService: LeaveService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadEmployees();
   }
-
+  //  load employee details
   loadEmployees(): void {
     this.employeeService.getEmployees().subscribe(
       (data) => {
@@ -49,6 +49,6 @@ export class LeaveApplicationComponent {
   }
   // Back function
   goBack(): void {
-    this.router.navigate(['/hr-dashboard']); // Adjust the route accordingly
+    this.router.navigate(['/hr-dashboard']);
   }
 }

@@ -41,6 +41,7 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   deleteEmployee(employeeId: number): void {
+    // Display a confirmation dialog using SweetAlert2
     Swal.fire({
       title: 'Are you sure?',
       text: 'You won\'t be able to revert this!',
@@ -50,17 +51,21 @@ export class EmployeeDetailsComponent implements OnInit {
       cancelButtonText: 'No, cancel!',
     }).then((result) => {
       if (result.isConfirmed) {
+        // If the user confirms, delete the employee
         this.employeeService.deleteEmployee(employeeId).subscribe(
           () => {
+            // Display a success alert
             Swal.fire({
               title: 'Success!',
               text: 'Employee deleted successfully.',
               icon: 'success',
             });
+            // Reload the list of employees
             this.loadEmployees();
             this.employeeService.notifyRefreshList(); // Notify to refresh the employee list
           },
           (error) => {
+            // Display an error alert if deletion fails
             Swal.fire({
               title: 'Error!',
               text: 'An error occurred while deleting the employee.',

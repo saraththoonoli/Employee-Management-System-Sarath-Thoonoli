@@ -34,11 +34,10 @@ export class HrLeaveComponent {
     this.hrLeaveService.rejectLeave(leaveRequestId).subscribe(() => {
       // After rejecting leave, fetch updated pending leave requests
       this.fetchPendingLeaveRequests();
-      // Show success alert
       this.showErrorAlert('Leave request rejected.');
     });
   }
-
+  // Show success alert
   private showSuccessAlert(message: string): void {
     Swal.fire({
       icon: 'success',
@@ -46,7 +45,7 @@ export class HrLeaveComponent {
       text: message,
     });
   }
-
+  // Display an error alert if deletion failsss alert
   private showErrorAlert(message: string): void {
     Swal.fire({
       icon: 'error',
