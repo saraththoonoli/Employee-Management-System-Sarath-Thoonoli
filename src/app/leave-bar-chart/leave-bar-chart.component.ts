@@ -21,13 +21,11 @@ export class LeaveBarChartComponent implements OnInit {
   }
 
   private fetchEmployeeData(): void {
-    // Sample data with numeric property (replace with your actual data)
     this.employeeData = [
-      { name: 'Employee A', someNumericProperty: 20 },
-      { name: 'Employee B', someNumericProperty: 35 },
-      { name: 'Employee C', someNumericProperty: 15 },
-      { name: 'Employee D', someNumericProperty: 50 },
-      // Add more data as needed
+      { name: 'mili', someNumericProperty: 5 },
+      { name: 'akash', someNumericProperty: 4 },
+      { name: 'shamal', someNumericProperty: 5 },
+      { name: 'Sarath thoonoli', someNumericProperty: 8 },
     ];
 
     this.createChart();
