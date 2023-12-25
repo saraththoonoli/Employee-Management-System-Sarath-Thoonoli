@@ -1,1 +1,65 @@
-<p>info works!</p>
+<a class="btn ms-3 me-3 mt-1" (click)="goBack()"
+  ><i class="fa-solid fa-2xl fa-circle-left" style="color: #000000"></i
+></a>
+<div class="container form-control">
+  <h1>Introduction:</h1>
+  <p>
+    The Employee Management System project is a comprehensive web application
+    developed using Angular, designed to streamline HR and employee-related
+    tasks within an organization. The system aims to provide a centralized
+    platform for managing employee information, leave requests, and overall
+    workforce administration. By leveraging Angular's capabilities, the
+    application offers an intuitive and responsive user interface, making it
+    accessible for both HR personnel and employees.
+  </p>
+  <br />
+
+  <h1>Authentication and Role-based Access:</h1>
+  <p>
+    The project incorporates a robust authentication system, distinguishing
+    between HR and regular employees. Through the AuthService, the application
+    verifies user credentials against stored data in the backend, allowing
+    secure access to specific features based on roles. HR members enjoy access
+    to a dedicated dashboard with functionalities tailored to their
+    administrative responsibilities, while employees have access to features
+    relevant to their needs.
+  </p>
+  <br />
+
+  <h1>Employee Data Management:</h1>
+  <p>
+    The heart of the system lies in efficient employee data management
+    facilitated by the EmployeeService. This service enables CRUD operations on
+    employee records, ensuring that HR can add, edit, and delete employee
+    information as needed. The service also plays a crucial role in notifying
+    components to refresh the employee list in real-time, providing an
+    up-to-date view of the workforce.
+  </p>
+  <br />
+
+  <h1>Leave Management:</h1>
+  <p>
+    The Employee Management System streamlines the leave application process
+    through the LeaveService. Employees can submit leave requests, view their
+    leave history, and check their leave balances. For HR personnel, the system
+    integrates a dedicated leave management component (HrLeaveComponent) within
+    the HR dashboard. This component displays pending leave requests and
+    provides HR with the ability to approve or reject them.
+  </p>
+  <br />
+  <h1>Online Status:</h1>
+
+  <p>
+    The system may track whether an employee is currently online or offline.
+    This status is useful for communication tools, allowing employees to know
+    who is available for real-time interactions.
+  </p>
+  <br />
+  <h1>Leave Status:</h1>
+
+  <p>
+    The system should maintain information about an employee's leave status,
+    indicating whether they are on leave, the type of leave (sick leave,
+    vacation, etc.), and the duration of the leave
+  </p>
+</div>

@@ -12,6 +12,7 @@ import { LeaveApplicationComponent } from './leave-application/leave-application
 import { LeaveRequestComponent } from './leave-request/leave-request.component';
 import { EmpEditComponent } from './emp-edit/emp-edit.component';
 import { WilsCardComponent } from './wils-card/wils-card.component';
+import { InfoComponent } from './info/info.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'leave-details', component: LeaveApplicationComponent, canActivate: [AuthGuard]  },
   { path: 'leave-req', component: LeaveRequestComponent, canActivate: [AuthGuard]  },
   { path: 'edit-employee/:id', component: EmpEditComponent, canActivate: [AuthGuard]  },
+  {path:'info',component:InfoComponent},
   {path:'**',component:WilsCardComponent}
 ];
 

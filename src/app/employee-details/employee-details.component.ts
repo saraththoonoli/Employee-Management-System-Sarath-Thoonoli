@@ -24,7 +24,7 @@ export class EmployeeDetailsComponent implements OnInit {
     this.loadEmployees();
 
   }
-
+// load emp details
   loadEmployees(): void {
     this.employeeService.getEmployees().subscribe(
       (data) => {
