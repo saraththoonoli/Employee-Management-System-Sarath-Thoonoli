@@ -49,11 +49,15 @@
         <h1>
           Welcome, <span>{{ loggedInEmployee.name | uppercase }}</span>
         </h1>
-        <p>Email ID : {{ loggedInEmployee.email }}</p>
+        <h5>Email ID : {{ loggedInEmployee.email }}</h5>
       </div>
 
+      <!-- just a dummy data only -->
       <div class="container">
-        <h2 class="mt-4 mb-4">Employee Training Programs</h2>
+        <h2 class="mt-4 mb-4">
+          Employee Training Programs
+          <i class="fa-solid fa-exclamation" style="color: #135bd8"></i>
+        </h2>
 
         <div class="training-section">
           <h3>Upcoming Training</h3>
