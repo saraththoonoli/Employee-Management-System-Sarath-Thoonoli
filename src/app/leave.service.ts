@@ -22,14 +22,4 @@ export class LeaveService {
     const url = `${this.apiUrl}?employeeId=${employeeId}`;
     return this.http.get<any[]>(url);
   }
-
-
-  // Method to get employee details
-  getEmployeeDetails(employeeId: number): Observable<any> {
-    const url = `${this.apiUrl}/employees/${employeeId}`;
-    return this.http.get<any>(url);
-  }
-
-
-
 }
