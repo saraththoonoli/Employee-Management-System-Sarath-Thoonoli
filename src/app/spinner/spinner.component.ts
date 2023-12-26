@@ -1,4 +1,3 @@
-// spinner.component.ts
 import { Component, OnInit } from '@angular/core';
 import { SpinnerService } from '../spinner.service'; // Import the SpinnerService
 import { Observable } from 'rxjs';
