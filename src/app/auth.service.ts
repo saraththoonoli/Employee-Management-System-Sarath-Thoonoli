@@ -69,29 +69,10 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.getRole() !== null;
   }
-  // Set and get the ID of the logged-in employee
-  setLoggedInEmployeeId(employeeId: string): void {
-    localStorage.setItem('employeeId', employeeId);
-  }
+
   // get loged employee id
   getLoggedInEmployeeId(): string | null {
     return localStorage.getItem('employeeId');
   }
-  // Clear the logged-in employee ID
-  clearLoggedInEmployeeId(): void {
-    localStorage.removeItem('employeeId');
-  }
-  // Set, get, and clear logged-in employee details
-  setLoggedInEmployeeDetails(details: any): void {
-    localStorage.setItem('employeeDetails', JSON.stringify(details));
-  }
-  // fetch logged in employee details
-  getLoggedInEmployeeDetails(): any | null {
-    const details = localStorage.getItem('employeeDetails');
-    return details ? JSON.parse(details) : null;
-  }
-  // clear loggedin employee details
-  clearLoggedInEmployeeDetails(): void {
-    localStorage.removeItem('employeeDetails');
-  }
+
 }

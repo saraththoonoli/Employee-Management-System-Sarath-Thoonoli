@@ -82,6 +82,17 @@
       />
     </div>
     <div class="mb-3">
+      <label for="bloodgroup" class="form-label">bloodgroup:</label>
+      <input
+        type="text"
+        id="bloodgroup"
+        name="bloodgroup"
+        class="form-control"
+        [(ngModel)]="employee.bloodGroup"
+        required
+      />
+    </div>
+    <div class="mb-3">
       <label for="gender" class="form-label">Gender:</label>
       <select
         id="gender"
@@ -95,7 +106,6 @@
         <option value="other">Other</option>
       </select>
     </div>
-   
 
     <button type="submit" class="btn btn-primary">Update Employee</button>
   </form>

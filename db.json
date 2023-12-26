@@ -18,7 +18,7 @@
     },
     {
       "name": "sharath.t",
-      "email": "mama@gmail",
+      "email": "saraththoonoli@gmail.com",
       "phone": "9874586214",
       "age": 23,
       "dob": "2023-12-21",
@@ -30,7 +30,7 @@
       "password": "sarath",
       "id": 3,
       "status": "inactive",
-      "online": false,
+      "online": true,
       "designation": "software engineer"
     },
     {
@@ -40,7 +40,7 @@
       "age": 22,
       "dob": "2000-10-12",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAAqmurFvPdiEBK824gg5B_CD1nIgXnClXCA&usqp=CAU",
-      "bloodGroup": "A+ve",
+      "bloodGroup": "B+ve",
       "gender": "male",
       "leaveDetails": "",
       "username": "shamal",
@@ -71,7 +71,7 @@
       "phone": 8526497563,
       "age": 29,
       "dob": "1988-12-21",
-      "image": "kj",
+      "image": "https://th.bing.com/th/id/OIP.FB95dhTaKXAWsmlklN4X4gHaK1?rs=1&pid=ImgDetMain",
       "bloodGroup": "A+ve",
       "gender": "female",
       "leaveDetails": "",
@@ -80,6 +80,22 @@
       "password": "swathi2525",
       "id": 8,
       "online": false
+    },
+    {
+      "name": "mahan",
+      "email": "mahan@gmail.com",
+      "phone": 2615489632,
+      "age": 25,
+      "dob": "1998-12-10",
+      "image": "kj",
+      "bloodGroup": "O+ve",
+      "gender": "other",
+      "leaveDetails": "",
+      "designation": "employee",
+      "username": "mahan",
+      "password": "mahaan",
+      "id": 10,
+      "online": false
     }
   ],
   "leaveRequests": [
@@ -87,18 +103,10 @@
       "employeeId": "3",
       "startDate": "2023-12-22",
       "endDate": "2023-12-21",
-      "reason": "mnbjhk",
+      "reason": "Traveling",
       "leaveType": "vacation",
       "status": "approved",
       "id": 28
-    },
-    {
-      "status": "approved",
-      "id": 29
-    },
-    {
-      "status": "rejected",
-      "id": 30
     },
     {
       "employeeId": "3",
@@ -112,44 +120,6 @@
       "id": 31
     },
     {
-      "employeeId": "3",
-      "startDate": "2023-12-21",
-      "endDate": "2023-12-25",
-      "reason": "wokdmiwd",
-      "leaveType": "vacation",
-      "status": "rejected",
-      "dates": [],
-      "reasons": "",
-      "id": 33
-    },
-    {
-      "employeeId": "3",
-      "startDate": "2023-12-25",
-      "endDate": "2023-12-28",
-      "reason": "khbsj",
-      "leaveType": "vacation",
-      "status": "approved",
-      "id": 34
-    },
-    {
-      "employeeId": "4",
-      "startDate": "2023-12-21",
-      "endDate": "2023-12-22",
-      "reason": "feaver",
-      "leaveType": "sick",
-      "status": "rejected",
-      "id": 35
-    },
-    {
-      "employeeId": "3",
-      "startDate": "2023-12-22",
-      "endDate": "2023-12-24",
-      "reason": "Travel to ootty",
-      "leaveType": "vacation",
-      "status": "rejected",
-      "id": 37
-    },
-    {
       "employeeId": "4",
       "startDate": "2023-12-23",
       "endDate": "2023-12-24",
@@ -159,61 +129,51 @@
       "id": 38
     },
     {
-      "employeeId": "3",
-      "startDate": "2023-12-24",
-      "endDate": "2023-12-25",
-      "reason": "Bangalore trip",
-      "leaveType": "vacation",
-      "status": "rejected",
-      "id": 39
-    },
-    {
-      "employeeId": "3",
-      "startDate": "2023-12-25",
-      "endDate": "2023-12-26",
-      "reason": "Personal",
-      "leaveType": "personal",
-      "status": "approved",
-      "id": 40
-    },
-    {
       "employeeId": "5",
       "startDate": "2023-12-28",
       "endDate": "2023-12-28",
       "reason": "Personal problems ",
       "leaveType": "sick",
-      "status": "pending",
+      "status": "approved",
       "id": 41
-    },
-    {
-      "employeeId": "5",
-      "startDate": "2024-02-05",
-      "endDate": "2024-02-05",
-      "reason": "jnkn",
-      "leaveType": "vacation",
-      "status": "pending",
-      "id": 42
     },
     {
       "employeeId": "5",
       "startDate": "2222-02-21",
       "endDate": "2222-12-05",
-      "reason": "wdwdwd",
+      "reason": "Checkup",
       "leaveType": "sick",
-      "status": "pending",
+      "status": "rejected",
       "id": 43
     },
     {
       "employeeId": "4",
       "startDate": "2023-12-28",
       "endDate": "2023-12-29",
-      "reason": "wdwdwidn",
+      "reason": "Personal",
       "leaveType": "Earned Leave",
-      "status": "pending",
+      "status": "rejected",
       "id": 44
-    }
+    },
+    {
+      "employeeId": "4",
+      "startDate": "2023-12-26",
+      "endDate": "2023-12-27",
+      "reason": "sick",
+      "leaveType": "Leave Without Pay",
+      "status": "pending",
+      "id": 45
+    },
+    {
+      "employeeId": "4",
+      "startDate": "2023-12-28",
+      "endDate": "2023-12-29",
+      "reason": "Sick",
+      "leaveType": "Leave Without Pay",
+      "status": "approved",
+      "id": 46
+    },
   ],
-  "hrResponses": [],
   "leaveCounts": [
     {
       "employeeId": 1,

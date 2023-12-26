@@ -4,6 +4,7 @@ import { LeaveService } from '../leave.service';
 import { AuthService } from '../auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-leave-request',
@@ -46,10 +47,23 @@ export class LeaveRequestComponent implements OnInit {
         () => {
           this.loadLeaveRequests();
           this.leaveForm.reset();
+
+          // Display success message
+          Swal.fire({
+            icon: 'success',
+            title: 'Leave Applied!',
+            text: 'Your leave request has been submitted successfully.',
+          });
         },
         (error) => {
           console.error('Error applying leave:', error);
-          // Handle error 
+
+          // Display error message
+          Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: 'An error occurred while applying leave. Please try again.',
+          });
         }
       );
     }
@@ -79,7 +93,7 @@ export class LeaveRequestComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/employee-dashboard']); // Adjust the route accordingly
+    this.router.navigate(['/employee-dashboard']);
   }
 
   isStatusAvailable(leaveRequest: any): boolean {
