@@ -68,7 +68,7 @@ import {MatChipsModule} from '@angular/material/chips';
     MatToolbarModule,
     MatIconModule,
     NgxChartsModule,
-    MatChipsModule
+    MatChipsModule,
     
   ],
   providers: [],

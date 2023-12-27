@@ -5,17 +5,30 @@
     <div class="col-md-6 bnx-login-page-title">
       <div class="container text-center">
         <h1>Welcome to Beinex</h1>
-        <p>"Beinex Login: Secure your account effortlessly with Beinex's login simplicity."</p>
-        <img width="100px" src="https://cdn.pixabay.com/animation/2022/12/01/17/03/17-03-11-60_512.gif" alt="" />
+        <p>
+          "Beinex Login: Secure your account effortlessly with Beinex's login
+          simplicity."
+        </p>
+        <img
+          width="100px"
+          src="https://cdn.pixabay.com/animation/2022/12/01/17/03/17-03-11-60_512.gif"
+          alt=""
+        />
       </div>
     </div>
   </div>
-  
+
   <div class="col bnx-main-div-two col-6">
     <!-- login section -->
     <div class="col-md-10 bnx-login-page-login">
       <div class="container">
-        <h2>Login <i class="fa-solid fa-fade fa-right-to-bracket" style="color: #115cdf"></i></h2>
+        <h2>
+          Login
+          <i
+            class="fa-solid fa-fade fa-right-to-bracket"
+            style="color: #115cdf"
+          ></i>
+        </h2>
         <form #loginForm="ngForm" (ngSubmit)="login()">
           <div class="form-group">
             <label for="username">Username:</label>
@@ -28,12 +41,19 @@
               placeholder="Enter Your Name"
               required
             />
-            <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)" class="text-danger">
+            <div
+              *ngIf="
+                loginForm.controls['username']?.invalid &&
+                (loginForm.controls['username']?.dirty ||
+                  loginForm.controls['username']?.touched)
+              "
+              class="text-danger"
+            >
               Username is required.
             </div>
           </div>
           <div class="form-group">
-            <label for="password">Password:</label> 
+            <label for="password">Password:</label>
             <input
               type="password"
               class="form-control"
@@ -43,12 +63,19 @@
               placeholder="Enter Your Password"
               required
             />
-            <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="text-danger">
+            <div
+              *ngIf="
+                loginForm.controls['password'].invalid &&
+                (loginForm.controls['password'].dirty ||
+                  loginForm.controls['password'].touched)
+              "
+              class="text-danger"
+            >
               Password is required.
             </div>
           </div>
           <br />
-          <button type="submit" class="btn btn-outline-primary btn-block" >
+          <button type="submit" class="btn btn-outline-primary btn-block">
             Login
           </button>
         </form>
