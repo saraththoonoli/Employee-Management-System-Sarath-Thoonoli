@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import { EmployeeService } from '../employee.service';
 import { PieArcDatum } from 'd3-shape';
 
+
 @Component({
   selector: 'app-doughnut-chart',
   templateUrl: './doughnut-chart.component.html',

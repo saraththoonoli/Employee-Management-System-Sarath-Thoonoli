@@ -26,20 +26,21 @@ export class LoginComponent implements OnInit {
     private spinnerService: SpinnerService,
     private fb: FormBuilder
   ) {
-     // Initialize the form in the constructor
-     this.loginForm = this.fb.group({
+    // Initialize the form in the constructor
+    this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
-// Life cycle hook
-  ngOnInit(): void {}
+  // Life cycle hook
+  ngOnInit(): void { }
 
-// Login Method
+  // Login Method
   login(): void {
 
     // Show spinner
     this.spinnerService.show();
+    console.log('Login initiated with username:', this.username);
     // Call the login method of the AuthService
     this.authService.login(this.username, this.password).subscribe(
       (success) => {
@@ -81,7 +82,7 @@ export class LoginComponent implements OnInit {
       },
       () => {
         // Hide spinner on completion 
-        this.spinnerService.hide(); 
+        this.spinnerService.hide();
       }
     );
   }

@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-create-employee',
   templateUrl: './create-employee.component.html',
@@ -67,7 +68,7 @@ export class CreateEmployeeComponent {
   }
 
   // goBack page navigation
-  goBack(){
+  goBack() {
     this.router.navigate(['hr-dashboard']);
   }
 }

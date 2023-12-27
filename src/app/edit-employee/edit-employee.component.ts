@@ -27,7 +27,7 @@ export class EditEmployeeComponent implements OnInit {
       this.employeeId = +params['id'];
       this.loadEmployeeDetails();
     });
-  }
+  } 
   // load the employee details
   loadEmployeeDetails(): void {
     this.employeeService.getEmployeeDetails(this.employeeId).subscribe(
