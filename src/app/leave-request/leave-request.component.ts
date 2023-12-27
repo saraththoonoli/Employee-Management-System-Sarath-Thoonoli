@@ -65,6 +65,8 @@ export class LeaveRequestComponent implements OnInit {
           });
         }
       );
+    } else {
+      console.error('Leave form is not valid');
     }
   }
 
@@ -72,7 +74,7 @@ export class LeaveRequestComponent implements OnInit {
     this.leaveService.getEmployeeLeaveRequests(this.employeeId).subscribe(
       (leaveRequests) => {
         if (leaveRequestId !== undefined) {
-          // Find the leave request with the  ID
+          // Find the leave request with the ID
           const selectedRequest = leaveRequests.find(
             (request) => request.id === leaveRequestId
           );
@@ -86,15 +88,15 @@ export class LeaveRequestComponent implements OnInit {
       },
       (error) => {
         console.error('Error fetching leave requests:', error);
-        // Handle error 
+        // Handle error
       }
     );
   }
-
+  // for back button
   goBack(): void {
     this.router.navigate(['/employee-dashboard']);
   }
-
+  // this is for leave status
   isStatusAvailable(leaveRequest: any): boolean {
     return (
       leaveRequest.status === 'approved' || leaveRequest.status === 'rejected'

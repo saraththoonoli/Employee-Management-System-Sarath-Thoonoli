@@ -11,17 +11,21 @@ export class HrLeaveComponent {
   pendingLeaveRequests: any[] = [];
 
   constructor(private hrLeaveService: HrLeaveService) {
-    // Fetch pending leave requests when the component 
+    console.log('HR Leave Component initialized.');
+    // Fetch pending leave requests when the component is initialized
     this.fetchPendingLeaveRequests();
   }
 
   fetchPendingLeaveRequests(): void {
+    console.log('Fetching pending leave requests...');
     this.hrLeaveService.getPendingLeaveRequests().subscribe((requests) => {
       this.pendingLeaveRequests = requests;
+      console.log('Pending leave requests:', this.pendingLeaveRequests);
     });
   }
 
   approveLeave(leaveRequestId: number): void {
+    console.log('Approving leave request with ID:', leaveRequestId);
     this.hrLeaveService.approveLeave(leaveRequestId).subscribe(() => {
       // After approving leave, fetch updated pending leave requests
       this.fetchPendingLeaveRequests();
@@ -31,12 +35,14 @@ export class HrLeaveComponent {
   }
 
   rejectLeave(leaveRequestId: number): void {
+    console.log('Rejecting leave request with ID:', leaveRequestId);
     this.hrLeaveService.rejectLeave(leaveRequestId).subscribe(() => {
       // After rejecting leave, fetch updated pending leave requests
       this.fetchPendingLeaveRequests();
       this.showErrorAlert('Leave request rejected.');
     });
   }
+
   // Show success alert
   private showSuccessAlert(message: string): void {
     Swal.fire({
@@ -45,7 +51,8 @@ export class HrLeaveComponent {
       text: message,
     });
   }
-  // Display an error alert if deletion failsss alert
+
+  // Display an error alert if rejection fails
   private showErrorAlert(message: string): void {
     Swal.fire({
       icon: 'error',

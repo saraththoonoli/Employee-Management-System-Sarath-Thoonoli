@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-create-employee',
   templateUrl: './create-employee.component.html',
@@ -33,10 +32,15 @@ export class CreateEmployeeComponent {
       bloodGroup: [''],
       gender: ['', Validators.required],
     });
+
+    // Log the initial state of the form
+    console.log('Initial employeeForm:', this.employeeForm.value);
   }
 
   // onSubmit method
   onSubmit(): void {
+    console.log('Submitting form:', this.employeeForm.value);
+
     if (this.employeeForm.valid) {
       this.employeeService.addEmployee(this.employeeForm.value).subscribe(
         () => {
@@ -45,7 +49,10 @@ export class CreateEmployeeComponent {
             text: 'Employee added successfully.',
             icon: 'success',
           });
+
           console.log('Employee added successfully.');
+          console.log('Updated employeeForm:', this.employeeForm.value);
+
           // Navigate to the employee-details route
           this.router.navigate(['/employee-details']);
         },
@@ -55,7 +62,8 @@ export class CreateEmployeeComponent {
             text: 'An error occurred while adding the employee.',
             icon: 'error',
           });
-          console.error('Error adding employee:', error);
+
+          console.error('Error adding emp:', error);
         }
       );
     } else {
@@ -64,11 +72,14 @@ export class CreateEmployeeComponent {
         text: 'Please fill in all required fields and correct any validation errors.',
         icon: 'warning',
       });
+
+      console.warn('Form submission blocked due to validation errors.');
     }
   }
 
   // goBack page navigation
   goBack() {
+    console.log('Navigating back to hr-dashboard');
     this.router.navigate(['hr-dashboard']);
   }
 }

@@ -11,7 +11,6 @@ import { LeaveService } from '../leave.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
   employees: any[] = [];
-  location: any;
 
   constructor(
     private router: Router,
@@ -20,15 +19,17 @@ export class EmployeeDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log('Employee Details Component initialized.');
     this.loadEmployees();
-    this.loadEmployees();
-
   }
-// load emp details
+
+  // load emp details
   loadEmployees(): void {
+    console.log('Fetching employees...');
     this.employeeService.getEmployees().subscribe(
       (data) => {
         this.employees = data;
+        console.log('Employees:', this.employees);
       },
       (error) => {
         console.error('Error fetching employees:', error);
@@ -37,10 +38,13 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   editEmployee(employeeId: number): void {
+    console.log('Editing employee with ID:', employeeId);
     this.router.navigate(['/edit', employeeId]);
   }
 
   deleteEmployee(employeeId: number): void {
+    console.log('Deleting employee with ID:', employeeId);
+
     // Display a confirmation dialog using SweetAlert2
     Swal.fire({
       title: 'Are you sure?',
@@ -62,7 +66,8 @@ export class EmployeeDetailsComponent implements OnInit {
             });
             // Reload the list of employees
             this.loadEmployees();
-            this.employeeService.notifyRefreshList(); // Notify to refresh the employee list
+            //  to refresh the employee list
+            this.employeeService.notifyRefreshList();
           },
           (error) => {
             // Display an error alert if deletion fails
@@ -82,6 +87,7 @@ export class EmployeeDetailsComponent implements OnInit {
 
   // Back function
   goBack(): void {
+    console.log('Navigating back to HR dashboard...');
     this.router.navigate(['/hr-dashboard']);
   }
 }

@@ -22,6 +22,7 @@ export class EmpEditComponent {
     // Subscribe to route parameters to get the employee ID
     this.route.params.subscribe((params) => {
       this.employeeId = +params['id'];
+      console.log('Employee ID:', this.employeeId);
       // Load employee details based on the ID
       this.loadEmployeeDetails();
     });
@@ -32,6 +33,7 @@ export class EmpEditComponent {
     this.employeeService.getEmployeeDetails(this.employeeId).subscribe(
       (data) => {
         this.employee = data;
+        console.log('Employee Details:', this.employee);
       },
       (error) => {
         console.error('Error fetching employee details:', error);
@@ -52,10 +54,11 @@ export class EmpEditComponent {
               title: 'Success',
               text: 'Employee details updated successfully.',
             }).then(() => {
+              console.log('Employee details updated successfully.');
               // Navigate back to employee details page
               this.router.navigate(['/emp-details']);
 
-              // reloading the component or fetching fresh data
+              // Reloading the component or fetching fresh data
               this.loadEmployeeDetails();
             });
           },
@@ -71,8 +74,10 @@ export class EmpEditComponent {
         );
     }
   }
+
   goBack(): void {
     // Navigate back to the employee details page
+    console.log('Navigating back to employee details page');
     this.router.navigate(['/emp-details']);
   }
 }
