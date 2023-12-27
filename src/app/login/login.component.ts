@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { SpinnerService } from '../spinner.service'; // Import the SpinnerService
 import Swal from 'sweetalert2';
 import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -16,12 +17,21 @@ export class LoginComponent implements OnInit {
   password: string = '';
   // spinner property
   loading: boolean = false;
+  // Reactive form
+  loginForm: FormGroup;
 
   constructor(
     private authService: AuthService,
     private router: Router,
-    private spinnerService: SpinnerService
-  ) {}
+    private spinnerService: SpinnerService,
+    private fb: FormBuilder
+  ) {
+     // Initialize the form in the constructor
+     this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+    });
+  }
 // Life cycle hook
   ngOnInit(): void {}
 

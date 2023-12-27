@@ -96,6 +96,34 @@
       "password": "mahaan",
       "id": 10,
       "online": false
+    },
+    {
+      "username": "komal",
+      "password": "komal",
+      "name": "komal",
+      "email": "komal@gmail.com",
+      "designation": "Backend ",
+      "phone": 8526954752,
+      "age": 25,
+      "dob": "1998-12-25",
+      "image": "kjn",
+      "bloodGroup": "O+ve",
+      "gender": "other",
+      "id": 11
+    },
+    {
+      "username": "saa",
+      "password": "saa",
+      "name": "saa",
+      "email": "saa@gnail.com",
+      "designation": "sa",
+      "phone": 5261489632,
+      "age": 55,
+      "dob": "2121-12-11",
+      "image": "121111",
+      "bloodGroup": "A+ve",
+      "gender": "other",
+      "id": 12
     }
   ],
   "leaveRequests": [
@@ -199,6 +227,15 @@
       "leaveType": "Leave Without Pay",
       "status": "pending",
       "id": 49
+    },
+    {
+      "employeeId": "11",
+      "startDate": "2023-02-11",
+      "endDate": "2033-11-12",
+      "reason": "ejkde",
+      "leaveType": "Comp Off",
+      "status": "pending",
+      "id": 50
     }
   ],
   "leaveCounts": [

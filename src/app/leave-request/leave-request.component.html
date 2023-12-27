@@ -15,6 +15,7 @@
         <option value="Comp Off">Comp Off</option>
       </select>
     </div>
+  
     <div class="mb-3">
       <label for="startDate" class="form-label">Start Date:</label>
       <input
@@ -23,7 +24,11 @@
         formControlName="startDate"
         class="form-control"
       />
+      <div *ngIf="leaveForm.get('startDate')!.invalid && (leaveForm.get('startDate')!.dirty || leaveForm.get('startDate')!.touched)" class="text-danger">
+        Start Date is required.
+      </div>
     </div>
+  
     <div class="mb-3">
       <label for="endDate" class="form-label">End Date:</label>
       <input
@@ -32,7 +37,11 @@
         formControlName="endDate"
         class="form-control"
       />
+      <div *ngIf="leaveForm.get('endDate')!.invalid && (leaveForm.get('endDate')!.dirty || leaveForm.get('endDate')!.touched)" class="text-danger">
+        End Date is required.
+      </div>
     </div>
+  
     <div class="mb-3">
       <label for="reason" class="form-label">Reason:</label>
       <textarea
@@ -40,15 +49,16 @@
         formControlName="reason"
         class="form-control"
       ></textarea>
+      <div *ngIf="leaveForm.get('reason')!.invalid && (leaveForm.get('reason')!.dirty || leaveForm.get('reason')!.touched)" class="text-danger">
+        Reason is required.
+      </div>
     </div>
-    <button
-      type="submit"
-      [disabled]="leaveForm.invalid"
-      class="btn btn-primary"
-    >
+  
+    <button type="submit" [disabled]="leaveForm.invalid" class="btn btn-primary">
       Apply
     </button>
   </form>
+  
 </div>
 
 <!-- leave req details -->
