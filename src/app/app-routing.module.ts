@@ -5,7 +5,6 @@ import { HrDashboardComponent } from './hr-dashboard/hr-dashboard.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { AuthGuard } from './auth.guard';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
-import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { EmpDetailsComponent } from './emp-details/emp-details.component';
 import { LeaveApplicationComponent } from './leave-application/leave-application.component';
@@ -13,6 +12,8 @@ import { LeaveRequestComponent } from './leave-request/leave-request.component';
 import { EmpEditComponent } from './emp-edit/emp-edit.component';
 import { WilsCardComponent } from './wils-card/wils-card.component';
 import { InfoComponent } from './info/info.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+
 
 
 const routes: Routes = [

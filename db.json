@@ -4,7 +4,7 @@
       "id": 1,
       "username": "employee1",
       "password": "employee1password",
-      "name": "EmployeeOne",
+      "name": "Gurun",
       "email": "employee1@example.com",
       "phone": "1234567890",
       "age": 30,
@@ -30,7 +30,7 @@
       "password": "sarath",
       "id": 3,
       "status": "inactive",
-      "online": true,
+      "online": false,
       "designation": "software engineer"
     },
     {
@@ -96,6 +96,21 @@
       "password": "mahaan",
       "id": 10,
       "online": false
+    },
+    {
+      "username": "akshay",
+      "password": "akshay",
+      "name": "akshay.k",
+      "email": "akshay@gmail.com",
+      "designation": "Bckend",
+      "phone": 8523647896,
+      "age": 33,
+      "dob": "1990-12-10",
+      "image": "https://th.bing.com/th/id/OIP.aPrAXebVFheO1nA-8qU47gHaJA?w=208&h=253&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "bloodGroup": "A+ve",
+      "gender": "male",
+      "id": 11,
+      "online": true
     }
   ],
   "leaveRequests": [
@@ -170,7 +185,7 @@
       "endDate": "2023-12-27",
       "reason": "sick",
       "leaveType": "Leave Without Pay",
-      "status": "pending",
+      "status": "rejected",
       "id": 45
     },
     {
@@ -197,8 +212,44 @@
       "endDate": "2023-12-28",
       "reason": "Hospital case",
       "leaveType": "Leave Without Pay",
-      "status": "pending",
+      "status": "approved",
       "id": 49
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-22",
+      "endDate": "2023-12-22",
+      "reason": "fever",
+      "leaveType": "Leave Without Pay",
+      "status": "approved",
+      "id": 50
+    },
+    {
+      "employeeId": "11",
+      "startDate": "2023-12-29",
+      "endDate": "2023-12-31",
+      "reason": "personal ",
+      "leaveType": "Leave Without Pay",
+      "status": "rejected",
+      "id": 51
+    },
+    {
+      "employeeId": "3",
+      "startDate": "2023-12-10",
+      "endDate": "2023-12-20",
+      "reason": "wdw",
+      "leaveType": "Earned Leave",
+      "status": "approved",
+      "id": 52
+    },
+    {
+      "employeeId": "1",
+      "startDate": "2023-12-12",
+      "endDate": "2023-12-20",
+      "reason": "hjdv",
+      "leaveType": "Leave Without Pay",
+      "status": "approved",
+      "id": 53
     }
   ],
   "leaveCounts": [

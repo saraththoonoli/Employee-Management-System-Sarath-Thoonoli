@@ -3,7 +3,6 @@
 }
 
 #sidebar {
-  width: 250px;
   background-color: rgb(137, 137, 137);
   color: #fff;
   padding: 20px;
@@ -14,6 +13,11 @@
   flex: 1;
   padding: 20px;
 }
+
+mat-drawer {
+  width: 248px;
+}
+
 
 #sidebar a {
   display: block;
@@ -38,8 +42,9 @@
 
 #sidebar a:hover {
   background-color: #555;
+  border-radius: 10px;
+  padding: 9px;
 }
-
 span {
   color: rgb(138, 138, 228);
   font-size: 35px;
@@ -87,7 +92,6 @@ h1 {
   border: none;
   border-radius: 15px;
 }
-
 
 
 

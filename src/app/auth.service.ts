@@ -27,7 +27,7 @@ export class AuthService {
         }));
       });
   }
-  // login logic
+  // login
   login(username: string, password: string): Observable<boolean> {
     return this.http.get<any[]>(this.apiUrl).pipe(
       map((employees) => {

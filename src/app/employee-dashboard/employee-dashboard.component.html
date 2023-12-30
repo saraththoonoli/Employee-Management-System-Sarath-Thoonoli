@@ -8,17 +8,16 @@
         width="120"
         height="120"
       />
-      <h4 class="ms-2 pt-3">{{ loggedInEmployee.name | uppercase }}</h4>
-      <p class="ms-2">
-        <span id="designation">{{ loggedInEmployee.designation }}</span>
+      <p class="ms-2 mt-5">
+        <span id="designation"> <i class="fa-solid fa-briefcase" style="color: #ffffff;"></i> {{ loggedInEmployee.designation }}</span>
       </p>
 
       <hr />
-      <a href="emp-details">Details page</a>
+      <a href="emp-details"> <i class="fa-regular fa-address-card" style="color: #ffffff;"></i>   Details page</a>
       <hr />
-      <a href="leave-req">Leave application page</a>
+      <a href="leave-req"> <i class="fa-brands fa-wpforms" style="color: #ffffff;"></i> Leave application page</a>
       <hr />
-      <p>Set status</p>
+      <p class="ms-2 pb-3"> <i class="fa-solid fa-location-crosshairs" style="color: #ffffff;"></i> Set status</p>
       <button
         class="btn-1"
         type="button"
@@ -60,13 +59,13 @@
         </h2>
 
         <div class="training-section">
-          <h3>Upcoming Training</h3>
+          <h3>Training Programs</h3>
           <table class="table table-bordered">
             <thead>
               <tr>
                 <th>Title</th>
                 <th>Trainer</th>
-                <th>Date</th>
+                <th>Completion days</th>
                 <th>Duration</th>
                 <th>Location</th>
                 <th>Action</th>
@@ -75,9 +74,19 @@
             <tbody>
               <tr>
                 <td>Angular Basics</td>
-                <td>John Doe</td>
-                <td>January 15, 2023</td>
+                <td>Martin saju</td>
+                <td>2 week from starting date </td>
                 <td>2 hours</td>
+                <td>Virtual</td>
+                <td>
+                  <button class="btn btn-success">Enroll</button>
+                </td>
+              </tr>
+              <tr>
+                <td>HTML and CSS Basics</td>
+                <td>Suhrath Fathima</td>
+                <td>3 week from starting date</td>
+                <td>5 hours</td>
                 <td>Virtual</td>
                 <td>
                   <button class="btn btn-success">Enroll</button>
