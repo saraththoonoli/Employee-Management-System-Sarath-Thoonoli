@@ -9,15 +9,27 @@
         height="120"
       />
       <p class="ms-2 mt-5">
-        <span id="designation"> <i class="fa-solid fa-briefcase" style="color: #ffffff;"></i> {{ loggedInEmployee.designation }}</span>
+        <span id="designation">
+          <i class="fa-solid fa-briefcase" style="color: #ffffff"></i>
+          {{ loggedInEmployee.designation }}</span
+        >
       </p>
 
       <hr />
-      <a href="emp-details"> <i class="fa-regular fa-address-card" style="color: #ffffff;"></i>   Details page</a>
+      <a href="emp-details">
+        <i class="fa-regular fa-address-card" style="color: #ffffff"></i>
+        Details page</a
+      >
       <hr />
-      <a href="leave-req"> <i class="fa-brands fa-wpforms" style="color: #ffffff;"></i> Leave application page</a>
+      <a href="leave-req">
+        <i class="fa-brands fa-wpforms" style="color: #ffffff"></i> Leave
+        application page</a
+      >
       <hr />
-      <p class="ms-2 pb-3"> <i class="fa-solid fa-location-crosshairs" style="color: #ffffff;"></i> Set status</p>
+      <p class="ms-2 pb-3">
+        <i class="fa-solid fa-location-crosshairs" style="color: #ffffff"></i>
+        Set status
+      </p>
       <button
         class="btn-1"
         type="button"
@@ -75,11 +87,11 @@
               <tr>
                 <td>Angular Basics</td>
                 <td>Martin saju</td>
-                <td>2 week from starting date </td>
+                <td>2 week from starting date</td>
                 <td>2 hours</td>
                 <td>Virtual</td>
                 <td>
-                  <button class="btn btn-success">Enroll</button>
+                  <a href="emp-trainning" class="btn btn-success">Enroll</a>
                 </td>
               </tr>
               <tr>
@@ -89,16 +101,13 @@
                 <td>5 hours</td>
                 <td>Virtual</td>
                 <td>
-                  <button class="btn btn-success">Enroll</button>
+                  <a href="emp-trainning" class="btn btn-success">Enroll</a>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-
-
-      
     </div>
   </mat-drawer-content>
 </mat-drawer-container>

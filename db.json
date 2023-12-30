@@ -30,7 +30,7 @@
       "password": "sarath",
       "id": 3,
       "status": "inactive",
-      "online": false,
+      "online": true,
       "designation": "software engineer"
     },
     {
@@ -250,6 +250,24 @@
       "leaveType": "Leave Without Pay",
       "status": "approved",
       "id": 53
+    },
+    {
+      "employeeId": "11",
+      "startDate": "2023-12-30",
+      "endDate": "2023-12-31",
+      "reason": "added leave",
+      "leaveType": "Earned Leave",
+      "status": "pending",
+      "id": 54
+    },
+    {
+      "employeeId": "10",
+      "startDate": "2023-12-30",
+      "endDate": "2023-12-31",
+      "reason": "Travel",
+      "leaveType": "Leave Without Pay",
+      "status": "pending",
+      "id": 55
     }
   ],
   "leaveCounts": [

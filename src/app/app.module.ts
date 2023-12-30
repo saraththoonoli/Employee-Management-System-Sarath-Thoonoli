@@ -30,6 +30,7 @@ import { LeaveBarChartComponent } from './leave-bar-chart/leave-bar-chart.compon
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { InfoComponent } from './info/info.component';
 import {MatChipsModule} from '@angular/material/chips';
+import { EmployeeTrainningComponent } from './employee-trainning/employee-trainning.component';
 
 
 
@@ -55,6 +56,7 @@ import {MatChipsModule} from '@angular/material/chips';
     LeaveApplicationComponent,
     LeaveBarChartComponent,
     InfoComponent,
+    EmployeeTrainningComponent,
   ],
   imports: [
     BrowserModule,

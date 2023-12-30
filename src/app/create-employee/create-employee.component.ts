@@ -19,17 +19,18 @@ export class CreateEmployeeComponent {
     private location: Location,
     private router: Router
   ) {
+    // validations
     this.employeeForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
-      name: ['', Validators.required],
+      username: ['', [Validators.required, Validators.minLength(2)]],
+      password: ['', Validators.required, Validators.minLength(5), Validators.maxLength(12)],
+      name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       designation: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       age: [null, Validators.required],
       dob: [null, Validators.required],
       image: [''],
-      bloodGroup: [''],
+      bloodGroup: ['',],
       gender: ['', Validators.required],
     });
 
@@ -81,5 +82,9 @@ export class CreateEmployeeComponent {
   goBack() {
     console.log('Navigating back to hr-dashboard');
     this.router.navigate(['hr-dashboard']);
+  }
+  //  candeactive guard
+  isFormDirty(): boolean {
+    return this.employeeForm.dirty;
   }
 }

@@ -13,6 +13,8 @@ import { EmpEditComponent } from './emp-edit/emp-edit.component';
 import { WilsCardComponent } from './wils-card/wils-card.component';
 import { InfoComponent } from './info/info.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { EmployeeTrainningComponent } from './employee-trainning/employee-trainning.component';
+import { DeactivateGuard } from './deactivate.guard';
 
 
 
@@ -22,13 +24,14 @@ const routes: Routes = [
   { path: 'employee-dashboard', component: EmployeeDashboardComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'employee-details', component: EmployeeDetailsComponent, canActivate: [AuthGuard] },
-  { path: 'create-employee', component: CreateEmployeeComponent, canActivate: [AuthGuard] },
-  { path: 'edit/:id', component: EditEmployeeComponent, canActivate: [AuthGuard]  },
+  { path: 'create-employee', component: CreateEmployeeComponent, canDeactivate: [DeactivateGuard],canActivate: [AuthGuard] },
+  { path: 'edit/:id', component: EditEmployeeComponent, canActivate: [AuthGuard],canDeactivate: [DeactivateGuard]  },
   { path: 'emp-details', component: EmpDetailsComponent, canActivate: [AuthGuard]  },
   { path: 'leave-details', component: LeaveApplicationComponent, canActivate: [AuthGuard]  },
   { path: 'leave-req', component: LeaveRequestComponent, canActivate: [AuthGuard]  },
-  { path: 'edit-employee/:id', component: EmpEditComponent, canActivate: [AuthGuard]  },
+  { path: 'edit-employee/:id', component: EmpEditComponent, canActivate: [AuthGuard],canDeactivate: [DeactivateGuard]  },
   {path:'info',component:InfoComponent},
+  {path:'emp-trainning',component:EmployeeTrainningComponent},
   {path:'**',component:WilsCardComponent}
 ];
 
