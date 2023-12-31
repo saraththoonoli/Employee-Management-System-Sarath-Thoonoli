@@ -1,6 +1,7 @@
-<a class="btn ms-3 me-3 mt-1" (click)="goBack()"
-  ><i class="fa-solid fa-2xl fa-circle-left" style="color: #000000"></i
-></a>
+<!-- Back button -->
+<a class="btn ms-2 me-2 mt-3" (click)="goBack()">
+  <i class="fa-solid fa-2xl fa-circle-left" style="color: #000000"></i>
+</a>
 
 <div class="container">
   <h2 class="text-center mb-1">
@@ -9,6 +10,25 @@
   </h2>
   <hr />
 
+  <!-- Search input section -->
+<div class="container mt-3">
+  <div class="input-group mb-3">
+    
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search"
+      aria-label="Search"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="searchTerm"
+      (input)="applyFilter()"
+    />
+    <span class="input-group-text" id="basic-addon1">
+      <i class="fa-solid fa-search" style="color: #000000"></i>
+    </span>
+  </div>
+</div>
+<!-- table -->
   <div class="table-responsive">
     <table class="table table-striped">
       <thead class="thead-dark">
@@ -29,7 +49,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let employee of employees">
+        <tr *ngFor="let employee of employees | employeeSearch: searchTerm">
           <td>{{ employee.id }}</td>
           <td>{{ employee.name }}</td>
           <td>{{ employee.designation }}</td>

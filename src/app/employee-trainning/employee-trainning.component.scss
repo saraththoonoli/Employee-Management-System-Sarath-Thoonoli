@@ -36,3 +36,28 @@
         border-radius: 20px;
     }
   }
+
+  table{
+  margin: auto;
+  width: 85%;
+  height: 350px;
+  border-radius: 20px;
+  border:5px;
+  thead{
+    height: 60px;
+  }
+  td{
+    color: black;
+  }
+  th{
+    color:yellow;
+    font-size: 20px;
+  }
+  
+  }
+  h2{
+    font-weight: 400;
+    font-size: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }

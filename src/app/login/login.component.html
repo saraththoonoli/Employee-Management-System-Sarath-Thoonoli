@@ -31,6 +31,7 @@
         </h2>
         <!-- form starting -->
         <form #loginForm="ngForm" (ngSubmit)="login()">
+          <!-- username -->
           <div class="form-group">
             <label for="username">Username:</label>
             <input
@@ -53,6 +54,7 @@
               Username is required.
             </div>
           </div>
+          <!-- password -->
           <div class="form-group">
             <label for="password">Password:</label>
             <input
@@ -76,6 +78,7 @@
             </div>
           </div>
           <br />
+          <!-- submit button -->
           <button type="submit" class="btn btn-outline-primary btn-block">
             Login
           </button>

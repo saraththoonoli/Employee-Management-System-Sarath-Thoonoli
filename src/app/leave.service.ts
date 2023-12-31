@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class LeaveService {
-  // Service property
+  // The base URL for the Leave Requests API
   private apiUrl = 'http://localhost:3000/leaveRequests';
   
   // Constructor with dependency injection

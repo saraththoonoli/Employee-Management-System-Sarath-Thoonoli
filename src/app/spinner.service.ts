@@ -5,14 +5,21 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class SpinnerService {
+  // To track the loading state with an initial value of false
   private loadingSubject = new BehaviorSubject<boolean>(false);
+
+  // Subscribe to changes in the loading state
   loading$ = this.loadingSubject.asObservable();
-  // show spinner
+
+  // Method to show the spinner
   show(): void {
+    // Set the loading state to true
     this.loadingSubject.next(true);
   }
-  // hide spinner
+
+  // Method to hide the spinner
   hide(): void {
+    // Set the loading state to false
     this.loadingSubject.next(false);
   }
 }

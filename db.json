@@ -19,11 +19,11 @@
     {
       "name": "sharath.t",
       "email": "saraththoonoli@gmail.com",
-      "phone": "9874586214",
-      "age": 23,
-      "dob": "2023-12-21",
+      "phone": "9874586218",
+      "age": 24,
+      "dob": "2000-12-21",
       "image": "https://media.licdn.com/dms/image/D5603AQERl2UEHojnSg/profile-displayphoto-shrink_200_200/0/1696170916176?e=2147483647&v=beta&t=QaLTJxALDgI3n7Eek-Dz4Natkj9z3mpad3jcIyTJH-s",
-      "bloodGroup": "B+ve",
+      "bloodGroup": "A+ve",
       "gender": "male",
       "leaveDetails": "2 leave",
       "username": "saraththoonoli",
@@ -63,7 +63,7 @@
       "username": "akash",
       "password": "akash",
       "id": 5,
-      "online": false
+      "online": true
     },
     {
       "name": "swathi",
@@ -95,7 +95,7 @@
       "username": "mahan",
       "password": "mahaan",
       "id": 10,
-      "online": false
+      "online": true
     },
     {
       "username": "akshay",
@@ -257,7 +257,7 @@
       "endDate": "2023-12-31",
       "reason": "added leave",
       "leaveType": "Earned Leave",
-      "status": "pending",
+      "status": "rejected",
       "id": 54
     },
     {

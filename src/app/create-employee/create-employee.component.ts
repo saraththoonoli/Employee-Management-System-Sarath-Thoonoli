@@ -38,41 +38,48 @@ export class CreateEmployeeComponent {
     console.log('Initial employeeForm:', this.employeeForm.value);
   }
 
- // onSubmit method
-onSubmit(): void {
-  console.log('Submitting form:', this.employeeForm.value);
+  // Method to calculate age
+  calculateAge(dateOfBirth: string): void {
+    const today = new Date();
+    const birthDate = new Date(dateOfBirth);
+    const age = today.getFullYear() - birthDate.getFullYear();
+    this.employeeForm.patchValue({ age });
+  }
 
-  if (this.employeeForm.valid) {
-    this.employeeService.addEmployee(this.employeeForm.value).subscribe(
-      () => {
-        Swal.fire({
-          title: 'Success!',
-          text: 'Employee added successfully.',
-          icon: 'success',
-        });
+  // onSubmit method
+  onSubmit(): void {
+    console.log('Submitting form:', this.employeeForm.value);
 
-        console.log('Employee added successfully.');
-        console.log('Updated employeeForm:', this.employeeForm.value);
+    if (this.employeeForm.valid) {
+      this.employeeService.addEmployee(this.employeeForm.value).subscribe(
+        () => {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Employee added successfully.',
+            icon: 'success',
+          });
 
-        // Navigate to the employee-details route
-        this.router.navigate(['/employee-details']);
-      },
-      (error) => {
-        Swal.fire({
-          title: 'Error!',
-          text: 'An error occurred while adding the employee.',
-          icon: 'error',
-        });
+          console.log('Employee added successfully.');
+          console.log('Updated employeeForm:', this.employeeForm.value);
 
-        console.error('Error adding emp:', error);
-      }
-    );
-  } 
-}
+          // Navigate to the employee-details route
+          this.router.navigate(['/employee-details']);
+        },
+        (error) => {
+          Swal.fire({
+            title: 'Error!',
+            text: 'An error occurred while adding the employee.',
+            icon: 'error',
+          });
 
+          console.error('Error adding emp:', error);
+        }
+      );
+    } 
+  }
 
-   //  candeactive guard
-   isFormDirty(): boolean {
+  //  candeactive guard
+  isFormDirty(): boolean {
     return this.employeeForm.dirty;
   }
 
@@ -81,5 +88,4 @@ onSubmit(): void {
     console.log('Navigating back to hr-dashboard');
     this.router.navigate(['hr-dashboard']);
   }
- 
 }

@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'emp-details', component: EmpDetailsComponent, canActivate: [AuthGuard]  },
   { path: 'leave-details', component: LeaveApplicationComponent, canActivate: [AuthGuard]  },
   { path: 'leave-req', component: LeaveRequestComponent, canActivate: [AuthGuard]  },
-  { path: 'edit-employee/:id', component: EmpEditComponent, canActivate: [AuthGuard],canDeactivate: [DeactivateGuard]  },
+  { path: 'edit-employee/:id', component: EmpEditComponent, canActivate: [AuthGuard], },
   {path:'info',component:InfoComponent},
   {path:'emp-trainning',component:EmployeeTrainningComponent},
   {path:'**',component:WilsCardComponent}

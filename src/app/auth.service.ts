@@ -16,7 +16,7 @@ export class AuthService {
   private loggedInEmployeeId: number | null = null;
   // DI for http
   constructor(private http: HttpClient) {
-    // Fetch employee credentials from the server (db.json)
+    // Fetch employee credentials from the server (json)
     this.http
       .get<any[]>(this.apiUrl)
       .subscribe((employees) => {

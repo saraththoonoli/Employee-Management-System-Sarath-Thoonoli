@@ -9,7 +9,9 @@ export class DeactivateGuard implements CanDeactivate<CreateEmployeeComponent> {
   canDeactivate(
     component: CreateEmployeeComponent
   ): boolean {
+    // Check if the form is dirty,
     if (component.isFormDirty()) {
+      // Display a confirmation dialog
       return window.confirm('Do you really want to leave?');
     }
   

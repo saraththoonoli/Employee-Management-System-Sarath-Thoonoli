@@ -11,13 +11,14 @@ import { LeaveService } from '../leave.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
   employees: any[] = [];
+  searchTerm: string = '';
 
   constructor(
     private router: Router,
     private employeeService: EmployeeService,
     private leaveService: LeaveService
   ) { }
-
+// life cyclehook
   ngOnInit(): void {
     console.log('Employee Details Component initialized.');
     this.loadEmployees();
@@ -36,12 +37,13 @@ export class EmployeeDetailsComponent implements OnInit {
       }
     );
   }
-
+// edit employee details
   editEmployee(employeeId: number): void {
     console.log('Editing employee with ID:', employeeId);
     this.router.navigate(['/edit', employeeId]);
   }
 
+  // delete employee details
   deleteEmployee(employeeId: number): void {
     console.log('Deleting employee with ID:', employeeId);
 
@@ -89,5 +91,22 @@ export class EmployeeDetailsComponent implements OnInit {
   goBack(): void {
     console.log('Navigating back to HR dashboard...');
     this.router.navigate(['/hr-dashboard']);
+  }
+
+  // search filter
+  applyFilter(): void {
+    if (this.searchTerm === '') {
+      // If search term is empty, reload all data
+      this.loadEmployees();
+    } else {
+      // Filter employees based on the search term
+      this.employees = this.employees.filter((emp) => {
+        const fullName = emp.name.toLowerCase();
+        const email = emp.email.toLowerCase();
+        const searchTerm = this.searchTerm.toLowerCase();
+
+        return fullName.includes(searchTerm) || email.includes(searchTerm);
+      });
+    }
   }
 }

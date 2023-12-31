@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HrLeaveService {
-  // Constructor with dependency injection
+  // The base URL for the Leave Requests API
   private apiUrl = 'http://localhost:3000/leaveRequests';
 
   // Method to get pending leave requests

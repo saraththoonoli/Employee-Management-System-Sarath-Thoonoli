@@ -31,6 +31,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { InfoComponent } from './info/info.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { EmployeeTrainningComponent } from './employee-trainning/employee-trainning.component';
+import { HoverHoverDirective } from './hover-hover.directive';
+import { EmployeeSearchPipe } from './employee-search.pipe';
 
 
 
@@ -57,6 +59,8 @@ import { EmployeeTrainningComponent } from './employee-trainning/employee-trainn
     LeaveBarChartComponent,
     InfoComponent,
     EmployeeTrainningComponent,
+    HoverHoverDirective,
+    EmployeeSearchPipe,
   ],
   imports: [
     BrowserModule,
