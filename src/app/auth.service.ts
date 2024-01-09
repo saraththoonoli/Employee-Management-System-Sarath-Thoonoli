@@ -8,13 +8,15 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
   private apiUrl = 'http://localhost:3000/employees';
+  
   // hr password and user name
   private hrCredentials = { username: 'hr', password: 'hrpassword' };
   // for emplyee verification
   private employeeCredentials: any[] = [];
   // get loggedin employee id
   private loggedInEmployeeId: number | null = null;
-  // DI for http
+
+  // Dependancy injection for http
   constructor(private http: HttpClient) {
     // Fetch employee credentials from the server (json)
     this.http
@@ -27,7 +29,7 @@ export class AuthService {
         }));
       });
   }
-  // login
+  // methord for login
   login(username: string, password: string): Observable<boolean> {
     return this.http.get<any[]>(this.apiUrl).pipe(
       map((employees) => {
@@ -56,7 +58,7 @@ export class AuthService {
       })
     );
   }
-  // logout
+  // methord for logout
   logout(): void {
     localStorage.removeItem('role');
     localStorage.removeItem('employeeId');
@@ -70,7 +72,7 @@ export class AuthService {
     return this.getRole() !== null;
   }
 
-  // get loged employee id
+  // get loged employee id 
   getLoggedInEmployeeId(): string | null {
     return localStorage.getItem('employeeId');
   }

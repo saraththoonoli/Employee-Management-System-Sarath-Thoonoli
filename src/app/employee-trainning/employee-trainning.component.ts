@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./employee-trainning.component.scss']
 })
 export class EmployeeTrainningComponent {
-
-constructor(private router:Router){}
-
+  // depandancy injuction
+  constructor(private router: Router) { }
+  // goback function
   goBack(): void {
     console.log('Navigating back to employee dashboard');
     this.router.navigate(['/employee-dashboard']);

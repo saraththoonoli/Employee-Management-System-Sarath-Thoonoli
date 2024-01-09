@@ -14,7 +14,7 @@ export class LeaveRequestComponent implements OnInit {
   leaveForm: FormGroup;
   employeeId: any; // This will be set based on the logged-in employee
   leaveRequests: any[] = [];
-
+// dependancy injection
   constructor(
     private leaveService: LeaveService,
     private authService: AuthService,
@@ -28,7 +28,7 @@ export class LeaveRequestComponent implements OnInit {
       leaveType: ['', Validators.required],
     });
   }
-
+// methord for get logged in employee id
   ngOnInit(): void {
     const loggedInEmployeeId = this.authService.getLoggedInEmployeeId();
     if (loggedInEmployeeId !== null) {
@@ -38,7 +38,7 @@ export class LeaveRequestComponent implements OnInit {
       console.error('Unable to retrieve logged-in employee ID');
     }
   }
-
+// methord for applay leave 
   applyLeave() {
     if (this.leaveForm.valid) {
       const leaveDetails = this.leaveForm.value;
@@ -69,7 +69,7 @@ export class LeaveRequestComponent implements OnInit {
       console.error('Leave form is not valid');
     }
   }
-
+// load leave request methord 
   loadLeaveRequests(leaveRequestId?: number) {
     this.leaveService.getEmployeeLeaveRequests(this.employeeId).subscribe(
       (leaveRequests) => {

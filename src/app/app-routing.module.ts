@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'employee-details', component: EmployeeDetailsComponent, canActivate: [AuthGuard] },
   { path: 'create-employee', component: CreateEmployeeComponent, canDeactivate: [DeactivateGuard],canActivate: [AuthGuard] },
-  { path: 'edit/:id', component: EditEmployeeComponent, canActivate: [AuthGuard],canDeactivate: [DeactivateGuard]  },
+  { path: 'edit/:id', component: EditEmployeeComponent, canActivate: [AuthGuard], },
   { path: 'emp-details', component: EmpDetailsComponent, canActivate: [AuthGuard]  },
   { path: 'leave-details', component: LeaveApplicationComponent, canActivate: [AuthGuard]  },
   { path: 'leave-req', component: LeaveRequestComponent, canActivate: [AuthGuard]  },

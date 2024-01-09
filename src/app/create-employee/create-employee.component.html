@@ -8,6 +8,7 @@
   </h2>
   <hr class="mb-4" />
   <form class="form mt-2" (ngSubmit)="onSubmit()" [formGroup]="employeeForm">
+    <!-- username -->
     <div class="mb-3">
       <label for="username" class="form-label">Username:</label>
       <input
@@ -24,7 +25,7 @@
         Username is required.
       </div>
     </div>
-
+    <!-- password -->
     <div class="mb-3">
       <label for="password" class="form-label">Password:</label>
       <input
@@ -41,7 +42,7 @@
         Password is required.
       </div>
     </div>
-
+    <!-- name -->
     <div class="mb-3">
       <label for="name" class="form-label">Name:</label>
       <input
@@ -58,7 +59,7 @@
         Name is required.
       </div>
     </div>
-
+    <!-- email -->
     <div class="mb-3">
       <label for="email" class="form-label">Email:</label>
       <input
@@ -81,7 +82,7 @@
         Please enter a valid email address.
       </div>
     </div>
-
+    <!-- designation -->
     <div class="mb-3">
       <label for="designation" class="form-label">Designation:</label>
       <input
@@ -98,7 +99,7 @@
         Designation is required.
       </div>
     </div>
-
+    <!-- phone number -->
     <div class="mb-3">
       <label for="phone" class="form-label">Phone:</label>
       <input
@@ -123,8 +124,8 @@
       </div>
     </div>
 
-
-     <div class="mb-3">
+    <!-- date of birth -->
+    <div class="mb-3">
       <label for="dob" class="form-label">Date of Birth:</label>
       <input
         type="date"
@@ -140,8 +141,9 @@
       >
         Date of Birth is required.
       </div>
-    </div>z
-
+    </div>
+    
+    <!-- age  -->
     <div class="mb-3">
       <label for="age" class="form-label">Age:</label>
       <input
@@ -159,9 +161,7 @@
       </div>
     </div>
 
-   
-    
-
+    <!-- image URL -->
     <div class="mb-3">
       <label for="image" class="form-label">Image URL:</label>
       <input
@@ -172,7 +172,7 @@
         formControlName="image"
       />
     </div>
-
+    <!-- Blood group -->
     <div class="mb-3">
       <label for="bloodGroup" class="form-label">Blood Group:</label>
       <input
@@ -183,7 +183,7 @@
         formControlName="bloodGroup"
       />
     </div>
-
+    <!-- Gender -->
     <div class="mb-3">
       <label for="gender" class="form-label">Gender:</label>
       <select
@@ -203,7 +203,7 @@
         Gender is required.
       </div>
     </div>
-
+<!-- button for Add -->
     <div class="mb-3">
       <button
         type="submit"

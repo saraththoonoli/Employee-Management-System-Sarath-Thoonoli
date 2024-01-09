@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 export class EmpEditComponent {
   employeeId: any;
   employee: any = {};
-
+  // dependancy injuction
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -27,7 +27,7 @@ export class EmpEditComponent {
       this.loadEmployeeDetails();
     });
   }
-
+// lead added employee details
   loadEmployeeDetails(): void {
     // Fetch employee details using the employee service
     this.employeeService.getEmployeeDetails(this.employeeId).subscribe(

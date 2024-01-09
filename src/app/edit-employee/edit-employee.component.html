@@ -7,6 +7,7 @@
   <h2>Edit Employee</h2>
   <hr />
   <form class="form" (ngSubmit)="updateEmployee()">
+    <!-- password -->
     <div class="mb-3">
       <label for="password" class="form-label">Password:</label>
       <input
@@ -18,6 +19,7 @@
         required
       />
     </div>
+    <!-- username -->
     <div class="mb-3">
       <label for="username" class="form-label">Username:</label>
       <input
@@ -29,6 +31,7 @@
         required
       />
     </div>
+    <!-- designation -->
     <div class="mb-3">
       <label for="designation" class="form-label">Designation:</label>
       <input
@@ -40,6 +43,7 @@
         required
       />
     </div>
+    <!-- name -->
     <div class="mb-3">
       <label for="name" class="form-label">Name:</label>
       <input
@@ -51,7 +55,7 @@
         required
       />
     </div>
-
+    <!-- age -->
     <div class="mb-3">
       <label for="age" class="form-label">Age:</label>
       <input
@@ -63,6 +67,7 @@
         required
       />
     </div>
+    <!-- dob -->
     <div class="mb-3">
       <label for="name" class="form-label">DOB:</label>
       <input
@@ -74,6 +79,7 @@
         required
       />
     </div>
+    <!-- image -->
     <div class="mb-3">
       <label for="image" class="form-label">Image:</label>
       <input
@@ -85,6 +91,7 @@
         required
       />
     </div>
+    <!-- phone -->
     <div class="mb-3">
       <label for="phone" class="form-label">Phone:</label>
       <input
@@ -96,6 +103,7 @@
         required
       />
     </div>
+    <!-- email -->
     <div class="mb-3">
       <label for="email" class="form-label">Email:</label>
       <input
@@ -107,6 +115,7 @@
         required
       />
     </div>
+    <!-- bloodgroup -->
     <div class="mb-3">
       <label for="bloodGroup" class="form-label">BloodGroup:</label>
       <input
@@ -118,6 +127,7 @@
         required
       />
     </div>
+    <!-- gender -->
     <div class="mb-3">
       <label for="gender" class="form-label">Gender:</label>
       <select
@@ -132,6 +142,7 @@
         <option value="other">Other</option>
       </select>
     </div>
+    <!-- submit button -->
     <div class="mb-3">
       <button (click)="updateEmployee()" type="submit" class="btn btn-primary">
         Update Employee

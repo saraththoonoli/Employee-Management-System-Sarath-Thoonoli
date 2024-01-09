@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class EmpDetailsComponent implements OnInit {
   loggedInEmployeeId: string | null;
   loggedInEmployee: any;
-
+// dependancy injecrion
   constructor(
     private authService: AuthService,
     private employeeService: EmployeeService,

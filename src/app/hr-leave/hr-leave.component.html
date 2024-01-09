@@ -2,7 +2,7 @@
   Pending Leave Requests
   <i class="fa-solid fa-spinner fa-spin-pulse" style="color: #1259d3"></i>
 </h2>
-<!-- Display pending leave requests in a table -->
+<!-- Display pending leave requests in a table. -->
 <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
@@ -24,6 +24,7 @@
         <td>{{ request.leaveType }}</td>
 
         <td>
+          <!--Action buttons -->
           <button class="btn btn-success" (click)="approveLeave(request.id)">
             Approve
           </button>

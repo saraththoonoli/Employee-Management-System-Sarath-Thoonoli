@@ -8,13 +8,16 @@ import { Observable, Subject } from 'rxjs';
 export class EmployeeService {
   // The base URL for the employee service API
   private apiUrl = 'http://localhost:3000/employees';
+
   // initialized to null, indicating that no employee is logged in initially.
   private loggedInEmployeeId: number | null = null;
+
   // when the employee list needs to be refreshed.
   private refreshListSubject = new Subject<void>();
 
   // Constructor with dependency injection
   constructor(private http: HttpClient) { }
+  
   // Method to get all employees
   getEmployees(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);

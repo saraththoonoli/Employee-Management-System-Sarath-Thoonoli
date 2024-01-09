@@ -8,7 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   templateUrl: './hr-dashboard.component.html',
   styleUrls: ['./hr-dashboard.component.scss'],
 })
-// Injection
+// Dependancy Injection
 export class HrDashboardComponent {
   constructor(private router: Router, private authService: AuthService) {
     console.log('HR Dashboard Component initialized.');

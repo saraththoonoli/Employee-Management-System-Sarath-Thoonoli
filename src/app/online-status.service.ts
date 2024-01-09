@@ -17,11 +17,4 @@ export class OnlineStatusService {
     const url = `${this.apiUrl}/${employeeId}`;
     return this.http.patch(url, { online });
   }
-  // Method to get the online status of an employee
-  getOnlineStatus(employeeId: number): Observable<any> {
-    const url = `${this.apiUrl}/${employeeId}`;
-    return this.http.get(url);
-  }
-
-
 }

@@ -1,5 +1,6 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
+    <!-- image -->
     <div id="sidebar" class="ps-4">
       <img
         class="ms-4"
@@ -26,6 +27,7 @@
         application page</a
       >
       <hr />
+      <!-- for set status -->
       <p class="ms-2 pb-3">
         <i class="fa-solid fa-location-crosshairs" style="color: #ffffff"></i>
         Set status
@@ -48,6 +50,7 @@
         Mark Offline
       </button>
       <hr />
+      <!-- logout -->
       <a type="button" (click)="logout()"
         ><i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff"></i
         >&nbsp;Logout</a
@@ -63,14 +66,14 @@
         <h5>Email ID : {{ loggedInEmployee.email }}</h5>
       </div>
 
-      <!-- just a dummy data only -->
+      <!-- just a dummy data only for table-->
       <div class="container">
         <h2 class="mt-4 mb-4">
           Employee Training Programs
           <i class="fa-solid fa-exclamation" style="color: #135bd8"></i>
         </h2>
 
-        <div  class="training-section">
+        <div class="training-section">
           <h3>Training Programs</h3>
           <table class="table table-bordered">
             <thead>
@@ -91,7 +94,9 @@
                 <td>2 hours</td>
                 <td>Virtual</td>
                 <td>
-                  <a appHoverHover href="emp-trainning" class="btn btn-success">Enroll</a>
+                  <a appHoverHover href="emp-trainning" class="btn btn-success"
+                    >Enroll</a
+                  >
                 </td>
               </tr>
               <tr>
@@ -101,7 +106,9 @@
                 <td>5 hours</td>
                 <td>Virtual</td>
                 <td>
-                  <a appHoverHover href="emp-trainning" class="btn btn-success">Enroll</a>
+                  <a appHoverHover href="emp-trainning" class="btn btn-success"
+                    >Enroll</a
+                  >
                 </td>
               </tr>
             </tbody>

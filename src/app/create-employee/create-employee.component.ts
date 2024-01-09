@@ -12,18 +12,19 @@ import { Router } from '@angular/router';
 })
 export class CreateEmployeeComponent {
   employeeForm: FormGroup;
-
+  // dependancy injection
   constructor(
     private formBuilder: FormBuilder,
     private employeeService: EmployeeService,
     private location: Location,
     private router: Router
   ) {
+    
     // validations
     this.employeeForm = this.formBuilder.group({
-      username: ['', [Validators.required,Validators.minLength(2)]],
+      username: ['', [Validators.required, Validators.minLength(2)]],
       password: ['', Validators.required],
-      name: ['', [Validators.required,Validators.minLength(2)]],
+      name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       designation: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
@@ -75,7 +76,7 @@ export class CreateEmployeeComponent {
           console.error('Error adding emp:', error);
         }
       );
-    } 
+    }
   }
 
   //  candeactive guard

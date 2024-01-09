@@ -9,13 +9,13 @@ import Swal from 'sweetalert2';
 })
 export class HrLeaveComponent {
   pendingLeaveRequests: any[] = [];
-
+  // Dependancy injuction
   constructor(private hrLeaveService: HrLeaveService) {
     console.log('HR Leave Component initialized.');
     // Fetch pending leave requests when the component is initialized
     this.fetchPendingLeaveRequests();
   }
-
+  // Methord for fetch pending leave req
   fetchPendingLeaveRequests(): void {
     console.log('Fetching pending leave requests...');
     this.hrLeaveService.getPendingLeaveRequests().subscribe((requests) => {
@@ -23,7 +23,7 @@ export class HrLeaveComponent {
       console.log('Pending leave requests:', this.pendingLeaveRequests);
     });
   }
-
+  // methord for aproove leave 
   approveLeave(leaveRequestId: number): void {
     console.log('Approving leave request with ID:', leaveRequestId);
     this.hrLeaveService.approveLeave(leaveRequestId).subscribe(() => {
@@ -33,7 +33,7 @@ export class HrLeaveComponent {
       this.showSuccessAlert('Leave request approved successfully.');
     });
   }
-
+  // methord for reject leave 
   rejectLeave(leaveRequestId: number): void {
     console.log('Rejecting leave request with ID:', leaveRequestId);
     this.hrLeaveService.rejectLeave(leaveRequestId).subscribe(() => {
